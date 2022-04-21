@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<config addfieldpath="/administrator/components/com_oscampus/models/fields">
+	<fieldset name="quizzes"
+              label="COM_OSCE_QUIZZES">
+        
+              <field name="passingScore"
+                     type="text"
+                     label="COM_OSCE_CONFIGURATION_QUIZZES_PASSING_SCORE_LABEL"
+                     description="COM_OSCE_CONFIGURATION_QUIZZES_PASSING_SCORE_DESC"
+                     filter="intval"
+                     validate="number"
+                     min="1"
+                     max="100"
+                     required="true"
+                     class="validate-numeric"
+                     default="70"/>
+
+              <field name="timeLimit"
+                     type="text"
+                     label="COM_OSCE_CONFIGURATION_QUIZZES_TIME_LIMIT_LABEL"
+                     description="COM_OSCE_CONFIGURATION_QUIZZES_TIME_LIMIT_DESC"
+                     filter="intval"
+                     class="validate-numeric"
+                     default="30"/>
+
+              <field name="lesson"
+                     type="sql"
+                     query="SELECT id,title FROM #__oscampus_courses"
+                     key_field="id"
+                     value_field = "title"
+                     
+                     required="true"
+
+                     />
+
+    </fieldset>
+
+	
+</config>

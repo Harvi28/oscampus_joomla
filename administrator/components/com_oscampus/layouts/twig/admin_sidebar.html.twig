@@ -1,0 +1,53 @@
+{#
+ # @package   OSCampus
+ # @contact   www.joomlashack.com, help@joomlashack.com
+ # @copyright 2015-2021 Joomlashack.com. All rights reserved
+ # @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ #
+ # This file is part of OSCampus.
+ #
+ # OSCampus is free software: you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by
+ # the Free Software Foundation, either version 2 of the License, or
+ # (at your option) any later version.
+ #
+ # OSCampus is distributed in the hope that it will be useful,
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ # GNU General Public License for more details.
+ #
+ # You should have received a copy of the GNU General Public License
+ # along with OSCampus.  If not, see <http://www.gnu.org/licenses/>.
+ #}
+
+<div id="j-sidebar-container" class="span2">
+    <div id="j-toggle-sidebar-wrapper">
+        <div id="j-toggle-button-wrapper" class="j-toggle-button-wrapper j-toggle-visible">
+            <div
+                id="j-toggle-sidebar-button"
+                class="j-toggle-sidebar-button hidden-phone hasTooltip"
+                title=""
+                type="button"
+                onclick="toggleSidebar(false); return false;"
+                data-original-title="Hide the sidebar">
+                <span id="j-toggle-sidebar-icon" class="icon-arrow-left-2 j-toggle-visible"></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-nav">
+            {% if submenu_items %}
+                <ul id="submenu" class="nav nav-list">
+                    {% for item in submenu_items %}
+                        <li class="{{ item.class }}">
+                            <a href="{{ item.link }}">{{ item.label }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+
+    <div id="j-toggle-sidebar"></div>
+</div>

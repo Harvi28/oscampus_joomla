@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="hidden">
+        <field name="id" type="hidden"/>
+    </fieldset>
+
+    <fieldset name="heading">
+        <field name="title"
+               type="text"
+               label="COM_OSCAMPUS_TITLE"
+               class="input-xxlarge input-large-text"
+               required="true"/>
+
+        <field name="alias"
+               type="text"
+               label="COM_OSCAMPUS_ALIAS"
+               description="JFIELD_ALIAS_PLACEHOLDER"
+               hint="JFIELD_ALIAS_PLACEHOLDER"/>
+    </fieldset>
+
+    <fieldset name="description" label="COM_OSCAMPUS_PATHWAY_DESCRIPTION_LABEL">
+        <field name="description"
+               label="COM_OSCAMPUS_PATHWAY_DESCRIPTION_LABEL"
+               type="editor"
+               required="true"
+               filter="JComponentHelper::filterText"
+               buttons="true"
+               hide="readmore,pagebreak"/>
+    </fieldset>
+
+    <fieldset name="params">
+        <field name="published"
+               type="list"
+               label="COM_OSCAMPUS_PUBLISHED"
+               class="chzn-color-state"
+               default="1"
+               required="true">
+            <option value="0">JUNPUBLISHED</option>
+            <option value="1">JPUBLISHED</option>
+        </field>
+
+        <field name="publish_up"
+               type="calendar"
+               label="COM_OSCAMPUS_PUBLISH_UP_LABEL"
+               format="%Y-%m-%d %H:%M"
+               showtime="true"
+               filter="user_utc"/>
+
+        <field name="publish_down"
+               type="calendar"
+               label="COM_OSCAMPUS_PUBLISH_DOWN_LABEL"
+               format="%Y-%m-%d %H:%M"
+               showtime="true"
+               filter="user_utc"/>
+
+        <field name="access"
+               type="accesslevel"
+               label="COM_OSCAMPUS_ACCESS_LEVEL"
+               required="true"/>
+
+        <field name="image"
+               type="media"
+               label="COM_OSCAMPUS_PATHWAY_IMAGE_LABEL"
+               class="readonly"/>
+
+        <field name="users_id"
+               type="user"
+               label="COM_OSCAMPUS_PATHWAY_OWNER_LABEL"
+               description="COM_OSCAMPUS_PATHWAY_OWNER_DESC"/>
+    </fieldset>
+
+    <fieldset name="metadata" label="COM_OSCAMPUS_ADMIN_TAB_METADATA">
+        <fields name="metadata">
+            <field name="title"
+                   type="text"
+                   label="COM_OSCAMPUS_METADATA_TITLE_LABEL"
+                   description="COM_OSCAMPUS_PATHWAY_METADATA_TITLE_DESC"
+                   size="50"/>
+
+            <field name="description"
+                   type="textarea"
+                   label="COM_OSCAMPUS_METADATA_DESCRIPTION_LABEL"
+                   description="COM_OSCAMPUS_PATHWAY_METADATA_DESCRIPTION_DESC"
+                   rows="10"/>
+        </fields>
+    </fieldset>
+</form>

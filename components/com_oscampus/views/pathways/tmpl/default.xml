@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata addfieldpath="/administrator/components/com_oscampus/models/fields">
+    <layout title="COM_OSCAMPUS_VIEW_PATHWAYS_DEFAULT_TITLE">
+        <message>
+            <![CDATA[COM_OSCAMPUS_VIEW_PATHWAYS_DEFAULT_DESC]]>
+        </message>
+    </layout>
+
+    <fields name="params">
+        <fieldset name="basic">
+            <field name="list_limit"
+                   type="oscampus.limit"
+                   label="COM_OSCAMPUS_LIST_LIMIT"
+                   default="-2"/>
+        </fieldset>
+
+        <fieldset name="pathways"
+                  label="COM_OSCAMPUS_VIEW_PATHWAYS_PARAMS_PATHWAYS">
+            <fields name="pathways">
+                <field name="ordering"
+                       type="list"
+                       label="COM_OSCAMPUS_PARAMS_ORDERING_LABEL"
+                       default="pathway.ordering">
+                    <option value="pathway.ordering">COM_OSCAMPUS_OPTION_ORDERING</option>
+                    <option value="pathway.title">COM_OSCAMPUS_OPTION_TITLE</option>
+                    <option value="pathway.created">COM_OSCAMPUS_OPTION_CREATED</option>
+                    <option value="pathway.modified">COM_OSCAMPUS_OPTION_MODIFIED</option>
+                </field>
+
+                <field name="direction"
+                       type="list"
+                       label="COM_OSCAMPUS_PARAMS_DIRECTION_LABEL"
+                       default="asc">
+                    <option value="asc">COM_OSCAMPUS_OPTION_ASC</option>
+                    <option value="desc">COM_OSCAMPUS_OPTION_DESC</option>
+                </field>
+            </fields>
+        </fieldset>
+
+        <fieldset name="courses"
+                  label="COM_OSCAMPUS_VIEW_PATHWAYS_PARAMS_COURSES">
+            <fields name="courses">
+                <field name="ordering"
+                       type="list"
+                       label="COM_OSCAMPUS_PARAMS_ORDERING_LABEL"
+                       default="cp.ordering">
+                    <option value="cp.ordering">COM_OSCAMPUS_OPTION_ORDERING</option>
+                    <option value="course.title">COM_OSCAMPUS_OPTION_TITLE</option>
+                    <option value="course.created">COM_OSCAMPUS_OPTION_CREATED</option>
+                    <option value="course.modified">COM_OSCAMPUS_OPTION_MODIFIED</option>
+                </field>
+
+                <field name="direction"
+                       type="list"
+                       label="COM_OSCAMPUS_PARAMS_DIRECTION_LABEL"
+                       default="asc">
+                    <option value="asc">COM_OSCAMPUS_OPTION_ASC</option>
+                    <option value="desc">COM_OSCAMPUS_OPTION_DESC</option>
+                </field>
+            </fields>
+        </fieldset>
+    </fields>
+</metadata>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="hidden">
+        <field name="id" type="hidden"/>
+    </fieldset>
+
+    <fieldset name="main">
+        <field name="title"
+               type="text"
+               label="COM_OSCAMPUS_TITLE"
+               required="true"/>
+
+        <field name="alias"
+               type="text"
+               label="COM_OSCAMPUS_ALIAS"
+               description="JFIELD_ALIAS_PLACEHOLDER"
+               hint="JFIELD_ALIAS_PLACEHOLDER"/>
+    </fieldset>
+</form>

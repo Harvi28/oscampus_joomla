@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<config addfieldpath="/administrator/components/com_oscampus/models/fields">
+    <fieldset name="main"
+              label="COM_OSCAMPUS_CONFIGURATION_MAIN">
+        <fields name="signup">
+            <field name="new"
+                   type="text"
+                   label="COM_OSCAMPUS_CONFIGURATION_MAIN_SIGNUP_NEW_LABEL"
+                   description="COM_OSCAMPUS_CONFIGURATION_MAIN_SIGNUP_NEW_DESC"/>
+
+            <field name="upgrade"
+                   type="text"
+                   label="COM_OSCAMPUS_CONFIGURATION_MAIN_SIGNUP_UPGRADE_LABEL"
+                   description="COM_OSCAMPUS_CONFIGURATION_MAIN_SIGNUP_UPGRADE_DESC"/>
+        </fields>
+
+        <fields name="access">
+            <field name="lesson"
+                   type="accesslevel"
+                   label="COM_OSCAMPUS_CONFIGURATION_ACCESS_LESSON_LABEL"
+                   description="COM_OSCAMPUS_CONFIGURATION_ACCESS_LESSON_DESC">
+                <option value="">COM_OSCAMPUS_OPTION_SELECT_ACCESS</option>
+            </field>
+        </fields>
+
+        <field name="list_limit"
+               type="oscampus.limit"
+               label="COM_OSCAMPUS_LIST_LIMIT"
+               oscampus_default="false"
+               default="-1"/>
+
+        <fields name="lesson">
+            <field name="showFreeflag"
+                   type="radio"
+                   label="COM_OSCAMPUS_CONFIGURATION_LESSON_SHOW_FREEFLAG_LABEL"
+                   description="COM_OSCAMPUS_CONFIGURATION_LESSON_SHOW_FREEFLAG_DESC"
+                   class="btn-group btn-group-yesno"
+                   default="1">
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+        </fields>
+    </fieldset>
+
+    <fieldset name="videos"
+              label="COM_OSCAMPUS_VIDEOS">
+        <fields name="videos">
+            <fields name="download">
+                <field name="enabled"
+                       type="radio"
+                       label="COM_OSCAMPUS_CONFIGURATION_VIDEOS_DOWNLOAD_ENABLED_LABEL"
+                       description="COM_OSCAMPUS_CONFIGURATION_VIDEOS_DOWNLOAD_ENABLED_DESC"
+                       class="btn-group btn-group-yesno"
+                       default="1">
+                    <option value="1">JENABLED</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+
+                <field name="limit"
+                       type="text"
+                       label="COM_OSCAMPUS_CONFIGURATION_VIDEOS_DOWNLOAD_LIMIT_LABEL"
+                       description="COM_OSCAMPUS_CONFIGURATION_VIDEOS_DOWNLOAD_LIMIT_DESC"
+                       default="20"
+                       showon="enabled:1"/>
+
+                <field name="period"
+                       type="text"
+                       label="COM_OSCAMPUS_CONFIGURATION_VIDEOS_DOWNLOAD_LIMIT_PERIOD_LABEL"
+                       description="COM_OSCAMPUS_CONFIGURATION_VIDEOS_DOWNLOAD_LIMIT_PERIOD_DESC"
+                       default="7"
+                       showon="enabled:1"/>
+
+                <field name="new"
+                       type="text"
+                       label="COM_OSCAMPUS_CONFIGURATION_VIDEOS_DOWNLOAD_NEW_LABEL"
+                       description="COM_OSCAMPUS_CONFIGURATION_VIDEOS_DOWNLOAD_NEW_DESC"
+                       showon="enabled:1"/>
+
+                <field name="upgrade"
+                       type="text"
+                       label="COM_OSCAMPUS_CONFIGURATION_VIDEOS_DOWNLOAD_UPGRADE_LABEL"
+                       description="COM_OSCAMPUS_CONFIGURATION_VIDEOS_DOWNLOAD_UPGRADE_DESC"
+                       showon="enabled:1"/>
+            </fields>
+
+            <field name="accuracy"
+                   type="list"
+                   label="COM_OSCAMPUS_CONFIGURATION_VIDEOS_ACCURACY_LABEL"
+                   description="COM_OSCAMPUS_CONFIGURATION_VIDEOS_ACCURACY_DESC"
+                   default="1">
+                <option value="0">COM_OSCAMPUS_OPTION_ACCURACY_OFF</option>
+                <option value="1">COM_OSCAMPUS_OPTION_ACCURACY_1</option>
+                <option value="5">COM_OSCAMPUS_OPTION_ACCURACY_5</option>
+                <option value="10">COM_OSCAMPUS_OPTION_ACCURACY_10</option>
+            </field>
+
+            <field name="completion"
+                   type="text"
+                   label="COM_OSCAMPUS_CONFIGURATION_VIDEOS_COMPLETED_LABEL"
+                   description="COM_OSCAMPUS_CONFIGURATION_VIDEOS_COMPLETED_DESC"
+                   validation="intval"
+                   showon="accuracy!:0"/>
+
+        </fields>
+    </fieldset>
+
+    <fieldset name="vimeo"
+              label="COM_OSCAMPUS_CONFIGURATION_VIMEO"
+              description="COM_OSCAMPUS_CONFIGURATION_VIMEO_DESC">
+        <fields name="vimeo">
+            <field name="id"
+                   type="textarea"
+                   label="COM_OSCAMPUS_CONFIGURATION_VIMEO_ID_LABEL"
+                   description="COM_OSCAMPUS_CONFIGURATION_VIMEO_ID_DESC"/>
+
+            <field name="secret"
+                   type="textarea"
+                   label="COM_OSCAMPUS_CONFIGURATION_VIMEO_SECRET_LABEL"
+                   description="COM_OSCAMPUS_CONFIGURATION_VIMEO_SECRET_DESC"
+                   rows="6"/>
+
+            <field name="token"
+                   type="textarea"
+                   label="COM_OSCAMPUS_CONFIGURATION_VIMEO_TOKEN_LABEL"
+                   description="COM_OSCAMPUS_CONFIGURATION_VIMEO_TOKEN_DESC"/>
+
+            <field name="color"
+                   type="color"
+                   label="COM_OSCAMPUS_CONFIGURATION_VIMEO_COLOR_LABEL"
+                   description="COM_OSCAMPUS_CONFIGURATION_VIMEO_COLOR_DESC"/>
+        </fields>
+    </fieldset>
+
+    <fieldset name="wistia"
+              label="COM_OSCAMPUS_CONFIGURATION_WISTIA"
+              description="COM_OSCAMPUS_CONFIGURATION_WISTIA_DESC">
+        <fields name="wistia">
+            <field name="apikey"
+                   type="textarea"
+                   label="COM_OSCAMPUS_CONFIGURATION_WISTIA_APIKEY_LABEL"
+                   description="COM_OSCAMPUS_CONFIGURATION_WISTIA_APIKEY_DESC"
+                   rows="4"/>
+        </fields>
+    </fieldset>
+
+    <fieldset name="quizzes"
+              label="COM_OSCAMPUS_QUIZZES">
+        <fields name="quizzes">
+            <field name="passingScore"
+                   type="text"
+                   label="COM_OSCAMPUS_CONFIGURATION_QUIZZES_PASSING_SCORE_LABEL"
+                   description="COM_OSCAMPUS_CONFIGURATION_QUIZZES_PASSING_SCORE_DESC"
+                   filter="intval"
+                   validate="number"
+                   min="1"
+                   max="100"
+                   required="true"
+                   class="validate-numeric"
+                   default="70"/>
+
+            <field name="timeLimit"
+                   type="text"
+                   label="COM_OSCAMPUS_CONFIGURATION_QUIZZES_TIME_LIMIT_LABEL"
+                   description="COM_OSCAMPUS_CONFIGURATION_QUIZZES_TIME_LIMIT_DESC"
+                   filter="intval"
+                   class="validate-numeric"/>
+
+            <field name="limitAlert"
+                   type="text"
+                   label="COM_OSCAMPUS_CONFIGURATION_QUIZZES_LIMIT_ALERT_LABEL"
+                   description="COM_OSCAMPUS_CONFIGURATION_QUIZZES_LIMIT_ALERT_DESC"
+                   filter="intval"
+                   class="validate-numeric"/>
+
+            <field name="showCorrect"
+                   type="radio"
+                   label="COM_OSCAMPUS_CONFIGURATION_QUIZZES_SHOW_CORRECT_LABEL"
+                   description="COM_OSCAMPUS_CONFIGURATION_QUIZZES_SHOW_CORRECT_DESC"
+                   class="btn-group btn-group-yesno"
+                   default="1">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+        </fields>
+    </fieldset>
+
+    <fieldset name="certificates"
+              label="COM_OSCAMPUS_CONFIGURATION_CERTIFICATES">
+        <fields name="certificates">
+            <field type="oscampus.gdcheck"/>
+
+            <field name="enabled"
+                   type="radio"
+                   label="COM_OSCAMPUS_CERTIFICATE_ENABLED_LABEL"
+                   class="btn-group btn-group-yesno"
+                   default="1">
+                <option value="0">JDISABLED</option>
+                <option value="1">JENABLED</option>
+            </field>
+
+            <field name="image"
+                   type="media"
+                   label="COM_OSCAMPUS_CERTIFICATE_IMAGE_LABEL"
+                   description="COM_OSCAMPUS_CERTIFICATE_IMAGE_DESC"
+                   showon="enabled:1"/>
+
+            <field name="font"
+                   type="oscampus.ttfont"
+                   label="COM_OSCAMPUS_CERTIFICATE_FONT_LABEL"
+                   default="roboto"
+                   showon="enabled:1">
+            </field>
+
+            <field name="fontsize"
+                   type="text"
+                   label="COM_OSCAMPUS_CERTIFICATE_FONTSIZE_LABEL"
+                   filter="floatval"
+                   default="48"
+                   showon="enabled:1"/>
+
+            <field name="fontcolor"
+                   type="color"
+                   label="COM_OSCAMPUS_CERTIFICATE_FONTCOLOR_LABEL"
+                   default="000"
+                   showon="enabled:1"/>
+
+            <field name="dateformat"
+                   type="text"
+                   label="COM_OSCAMPUS_CERTIFICATE_DATEFORMAT_LABEL"
+                   description="COM_OSCAMPUS_CERTIFICATE_DATEFORMAT_DESC"
+                   default="M j, Y"
+                   showon="enabled:1"/>
+
+            <field name="filename"
+                   type="text"
+                   label="COM_OSCAMPUS_CERTIFICATE_FILENAME_LABEL"
+                   description="COM_OSCAMPUS_CERTIFICATE_FILENAME_DESC"
+                   default="certificate_{class}"
+                   showon="enabled:1"/>
+        </fields>
+    </fieldset>
+
+    <fieldset name="themes"
+              label="COM_OSCAMPUS_CONFIGURATION_THEMES_LABEL"
+              description="COM_OSCAMPUS_CONFIGURATION_THEMES_DESC">
+        <fields name="themes">
+            <field name="fontFamily"
+                   type="oscampus.font"
+                   label="COM_OSCAMPUS_CONFIGURATION_FONTFAMILY_LABEL"
+                   description="COM_OSCAMPUS_CONFIGURATION_FONTFAMILY_DESC">
+                <option value="">COM_OSCAMPUS_OPTION_FONT_NONE</option>
+            </field>
+
+            <field name="theme"
+                   type="oscampus.theme"
+                   label="COM_OSCAMPUS_CONFIGURATION_THEME_LABEL"
+                   description="COM_OSCAMPUS_CONFIGURATION_THEME_DESC"
+                   default="default"/>
+
+            <field name="fontAwesome"
+                   type="list"
+                   label="COM_OSCAMPUS_CONFIGURATION_FONTAWESOME_LABEL"
+                   description="COM_OSCAMPUS_CONFIGURATION_FONTAWESOME_DESC"
+                   default="1">
+                <option value="1">COM_OSCAMPUS_OPTION_LOAD_ALWAYS</option>
+                <option value="0">COM_OSCAMPUS_OPTION_LOAD_NEVER</option>
+                <option value="site">COM_OSCAMPUS_OPTION_LOAD_SITE</option>
+                <option value="administrator">COM_OSCAMPUS_OPTION_LOAD_ADMIN</option>
+            </field>
+        </fields>
+    </fieldset>
+
+    <fieldset name="advanced"
+              label="COM_OSCAMPUS_CONFIGURATION_ADVANCED"
+              description="COM_OSCAMPUS_CONFIGURATION_ADVANCED_DESC">
+        <fields name="advanced">
+            <field name="jquery"
+                   type="list"
+                   label="COM_OSCAMPUS_CONFIGURATION_JQUERY_LABEL"
+                   description="COM_OSCAMPUS_CONFIGURATION_JQUERY_DESC"
+                   default="1">
+                <option value="1">COM_OSCAMPUS_OPTION_LOAD_ALWAYS</option>
+                <option value="0">COM_OSCAMPUS_OPTION_LOAD_NEVER</option>
+                <option value="site">COM_OSCAMPUS_OPTION_LOAD_SITE</option>
+                <option value="administrator">COM_OSCAMPUS_OPTION_LOAD_ADMIN</option>
+            </field>
+
+            <field name="pathowners"
+                   type="radio"
+                   label="COM_OSCAMPUS_CONFIGURATION_ADVANCED_PATHOWNERS_LABEL"
+                   description="COM_OSCAMPUS_CONFIGURATION_ADVANCED_PATHOWNERS_DESC"
+                   class="btn-group btn-group-yesno"
+                   default="0">
+                <option value="1">JENABLED</option>
+                <option value="0">JDISABLED</option>
+            </field>
+        </fields>
+    </fieldset>
+
+    <fieldset name="permissions"
+              label="JCONFIG_PERMISSIONS_LABEL"
+              description="JCONFIG_PERMISSIONS_DESC"
+              addfieldpath="/administrator/components/com_oscampus/form/fields">
+        <field name="rules"
+               type="rules"
+               label="JCONFIG_PERMISSIONS_LABEL"
+               filter="rules"
+               validate="rules"
+               component="com_oscampus"
+               section="component"/>
+
+        <field name="customfooter"
+               type="customfooter"
+               media="com_oscampus"
+               showgoproad="0"
+               jedurl="https://extensions.joomla.org/extension/oscampus"/>
+    </fieldset>
+</config>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addrulepath="components/com_osce/models/rules">
+		<field
+				name="id"
+				type="hidden"
+				/>
+		<field
+				name="ques"
+				type="text"
+				label="COM_OSCE_OSCE_QUESTION_LABEL"
+				description="COM_OSCE_OSCE_QUESTION_DESC"
+				size="40"
+				class="inputbox"
+				default=""
+				required="true"
+				/>
+			
+		<field
+			name="opt1"
+			label="COM_OSCE_OSCE_OPTION1_LABEL"
+			description="COM_OSCE_OSCE_OPTION1_DESC"
+			type="text"
+			required="true"
+
+			/>
+		<field
+			name="opt2"
+			label="COM_OSCE_OSCE_OPTION2_LABEL"
+			description="COM_OSCE_OSCE_OPTION2_DESC"
+			type="text"
+			required="true"
+
+			/>
+		<field
+			name="opt3"
+			label="COM_OSCE_OSCE_OPTION3_LABEL"
+			description="COM_OSCE_OSCE_OPTION3_DESC"
+			type="text"
+			required="true"
+			/>
+		<field
+			name="opt4"
+			label="COM_OSCE_OSCE_OPTION4_LABEL"
+			description="COM_OSCE_OSCE_OPTION4_DESC"
+			type="text"
+			required="true"
+
+			/>
+		
+		<field name="correct_ans" type="radio"  label="Select correct answer" description="" class="btn-group" required="true">
+	  		<option value="1">Option 1</option>
+	  		<option value="2">Option 2</option>
+	  		<option value="3">Option 3</option>
+	  		<option value="4">Option 4</option>
+
+		</field>
+
+
+	</fieldset>
+	
+		<fieldset 
+			name="tags"
+		>
+		<field
+					name="tag_id"
+					type="sql"
+					query="SELECT id, title FROM #__osce_tags where published=1"
+    				key_field="id"
+    				value_field = "title"
+					multiple="multiple"
+					required="true"
+
+		>
+				
+		</field>		
+		</fieldset>
+	
+	<!-- <fieldset>
+		<field
+			name="created_by"
+			type="text"
+			required="true"
+			/>
+		<field
+			name="modified_on"
+			type="calendar"
+			
+			/>
+		
+		<field
+			name="modified_by"
+			type="text"
+			
+			/>
+		
+	</fieldset> -->
+	
+</form>

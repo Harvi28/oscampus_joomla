@@ -1,0 +1,50 @@
+{#
+ # @package   OSCampus
+ # @contact   www.joomlashack.com, help@joomlashack.com
+ # @copyright 2016-2021 Joomlashack.com. All rights reserved
+ # @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ #
+ # This file is part of OSCampus.
+ #
+ # OSCampus is free software: you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by
+ # the Free Software Foundation, either version 2 of the License, or
+ # (at your option) any later version.
+ #
+ # OSCampus is distributed in the hope that it will be useful,
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ # GNU General Public License for more details.
+ #
+ # You should have received a copy of the GNU General Public License
+ # along with OSCampus.  If not, see <http://www.gnu.org/licenses/>.
+ #}
+
+{% extends 'admin_form.html.twig' %}
+
+{% set imageLoading = html('image', 'com_oscampus/loading.gif', 'loading', null, true) %}
+
+{% block main_content %}
+    {{ scriptText('COM_OSCAMPUS_STATISTICS_NO_COURSE') }}
+    {{ scriptText('COM_OSCAMPUS_STATISTICS_NO_STUDENT') }}
+    {{ html('osc.fontawesome') }}
+    {{ html('bootstrap.tooltip') }}
+    {{ html('searchtools.main') }}
+    {{ html('script', 'com_oscampus/admin/statistics.min.js', {'relative': true}) }}
+
+    <div id="osc-statistics">
+        {{ imageLoading|raw }}
+    </div>
+    <script>
+        jQuery(document).ready(function($) {
+            $('#osc-statistics')
+                .html('{{ imageLoading|raw }}')
+                .load('index.php', {
+                    option: 'com_oscampus',
+                    view  : 'statistics',
+                    format: 'raw',
+                    report: '{{ report }}'
+                });
+        });
+    </script>
+{% endblock %}

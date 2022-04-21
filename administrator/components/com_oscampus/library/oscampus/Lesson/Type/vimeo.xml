@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <form>
+        <fieldset name="content">
+            <fields name="content">
+                <field name="id"
+                    type="text"
+                    label="COM_OSCAMPUS_VIMEO_ID_LABEL"
+                    required="true"/>
+            </fields>
+        </fieldset>
+    </form>
+</metadata>

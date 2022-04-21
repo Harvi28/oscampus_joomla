@@ -1,0 +1,39 @@
+{#
+ # @package    OSCampus
+ # @contact    www.joomlashack.com, help@joomlashack.com
+ # @copyright  2019 Joomlashack.com. All rights reserved
+ # @license    http://www.gnu.org/licenses/gpl.html GNU/GPL
+ #
+ # This file is part of OSCampus.
+ #
+ # OSCampus is free software: you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by
+ # the Free Software Foundation, either version 2 of the License, or
+ # (at your option) any later version.
+ #
+ # OSCampus is distributed in the hope that it will be useful,
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ # GNU General Public License for more details.
+ #
+ # You should have received a copy of the GNU General Public License
+ # along with OSCampus.  If not, see <http://www.gnu.org/licenses/>.
+ #}
+
+{% extends 'admin_list.html.twig' %}
+
+{% block list_head %}
+    {{ list_macro.th_checkall() }}
+    {{ list_macro.th_sort('certificate.title', 'COM_OSCAMPUS_TITLE', ordering.direction, ordering.order) }}
+    {{ list_macro.th_default('certificate.default', ordering.direction, ordering.order) }}
+    {{ list_macro.th_published('certificate.published', ordering.direction, ordering.order) }}
+    {{ list_macro.th_sort('certificate.id', 'COM_OSCAMPUS_ID', ordering.direction, ordering.order, '1%') }}
+{% endblock %}
+
+{% block list_item %}
+    {{ list_macro.td_check(loop.index0, item.id) }}
+    {{ list_macro.td_edit_link(item, loop.index0, 'certificate', 'certificates.', item.title) }}
+    {{ list_macro.td_default(item.default, loop.index0, 'certificates.') }}
+    {{ list_macro.td_published(item.published, loop.index0, 'certificates.') }}
+    {{ list_macro.td_text(item.id, 'center') }}
+{% endblock %}

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+
+	<name>COM_OSCE</name>
+	<!-- The following elements are optional and free of formatting constraints -->
+	<creationDate>Dec 2021</creationDate>
+	<author>Laitmatus Softwares Pvt ltd</author>
+	<authorEmail>pjp.comp@gmail.com</authorEmail>
+	<authorUrl>https://laitmatus.com/</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<!--  The version string is recorded in the components table -->
+	<version>0.0.1</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>COM_OSCE_DESCRIPTION</description>
+
+	<!-- Runs on install/uninstall/update; New in 2.5 -->
+	<scriptfile>script.php</scriptfile>
+	
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update> <!-- Runs on update; New since J2.5 -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>osce.php</filename>
+		<filename>controller.php</filename>
+
+		<folder>assets</folder>
+		<folder>controllers</folder>
+		<folder>views</folder>
+		<folder>models</folder>
+	</files>
+
+
+        <languages folder="site/language">
+			<language tag="en-GB">en-GB/en-GB.com_osce.ini</language>
+        </languages>
+
+		<media destination="com_osce" folder="media">
+			<filename>index.html</filename>
+			<!-- <folder>images</folder> -->
+		</media>
+
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu link='index.php?option=com_osce'>COM_OSCE_MENU</menu>
+
+	<files folder="admin">
+			<!-- Admin Main File Copy Section -->
+			<filename>index.html</filename>
+			<filename>config.xml</filename>
+			<filename>osce.php</filename>
+			<filename>controller.php</filename>
+			<filename>access.xml</filename>
+			<!-- SQL files section -->
+			<folder>sql</folder>
+			<!-- tables files section -->
+			<folder>tables</folder>
+			<!-- models files section -->
+			<folder>models</folder>
+			<!-- views files section -->
+			<folder>views</folder>
+			<!-- controllers files section -->
+			<folder>controllers</folder>
+			<!-- helpers files section -->
+			<folder>helpers</folder>
+			<folder>assets</folder>
+			
+		</files>
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB/en-GB.com_osce.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_osce.sys.ini</language>
+		</languages>
+	</administration>
+
+</extension>

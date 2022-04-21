@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="user" method="upgrade">
+    <name>plg_user_oscampus</name>
+    <author>Joomlashack</author>
+    <creationDate>July 09 2021</creationDate>
+    <copyright>Copyright 2015-2021 Joomlashack.com. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>help@joomlashack.com</authorEmail>
+    <authorUrl>http://www.joomlashack.com</authorUrl>
+    <version>2.1.6</version>
+    <description>plg_user_oscampus_description</description>
+
+    <files>
+        <folder>language</folder>
+        <filename plugin="oscampus">oscampus.php</filename>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="purge"
+                       type="radio"
+                       label="PLG_USER_OSCAMPUS_PURGE_LABEL"
+                       description="PLG_USER_OSCAMPUS_PURGE_DESC"
+                       class="btn-group btn-group-yesno"
+                       default="1">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

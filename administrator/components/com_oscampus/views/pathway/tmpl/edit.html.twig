@@ -1,0 +1,47 @@
+{#
+ # @package   OSCampus
+ # @contact   www.joomlashack.com, help@joomlashack.com
+ # @copyright 2015-2021 Joomlashack.com. All rights reserved
+ # @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ #
+ # This file is part of OSCampus.
+ #
+ # OSCampus is free software: you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by
+ # the Free Software Foundation, either version 2 of the License, or
+ # (at your option) any later version.
+ #
+ # OSCampus is distributed in the hope that it will be useful,
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ # GNU General Public License for more details.
+ #
+ # You should have received a copy of the GNU General Public License
+ # along with OSCampus.  If not, see <http://www.gnu.org/licenses/>.
+ #}
+
+{% extends 'admin_form.html.twig' %}
+
+{% set main_legend = 'COM_OSCAMPUS_PAGE_VIEW_PATHWAY_' ~ (item.id ? 'EDIT' : 'ADD')|lang %}
+
+{% block form_header %}
+    {{ html('osc.render.formfield', form.getField('title'))|raw }}
+    {{ html('osc.render.formfield', form.getField('alias'))|raw }}
+{% endblock %}
+
+{% block form_body %}
+    {{ form_macro.tabs_startset(form, {'active' : 'description-panel'}) }}
+
+    {{ form_macro.tabs_add(form, 'description') }}
+    <div class="form-vertical">
+        {{ form_macro.render_fieldset(form, 'description', false, '9') }}
+        {{ form_macro.render_fieldset(form, 'params', false, '3') }}
+    </div>
+    {{ form_macro.tabs_end() }}
+
+    {{ form_macro.tabs_add(form, 'metadata') }}
+    {{ form_macro.render_fieldset(form, 'metadata', false) }}
+    {{ form_macro.tabs_end() }}
+
+    {{ form_macro.tabs_endset() }}
+{% endblock %}

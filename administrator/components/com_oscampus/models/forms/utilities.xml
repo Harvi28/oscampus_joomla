@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="transfer">
+        <fields name="transfer">
+            <field name="source"
+                   type="user"
+                   label="COM_OSCAMPUS_UTILITIES_TRANSFER_SOURCE"/>
+
+            <field name="target"
+                   type="user"
+                   label="COM_OSCAMPUS_UTILITIES_TRANSFER_TARGET"/>
+        </fields>
+    </fieldset>
+</form>

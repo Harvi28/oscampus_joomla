@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field name="search"
+               type="text"
+               label="COM_OSCAMPUS_FILTER_SEARCH_LABEL"
+               description="COM_OSCAMPUS_FILTER_SEARCH_DESC"
+               hint="COM_OSCAMPUS_FILTER_SEARCH_HINT"/>
+
+        <field name="course"
+               type="oscampus.options"
+               options="courses"
+               onchange="this.form.submit();">
+            <option value="">COM_OSCAMPUS_OPTION_SELECT_COURSE</option>
+        </field>
+
+        <field name="published"
+               type="status"
+               filter="0,1"
+               onchange="this.form.submit();">
+            <option value="">COM_OSCAMPUS_OPTION_SELECT_PUBLISHED</option>
+        </field>
+
+        <field name="lessontype"
+               type="oscampus.options"
+               options="lessontypes"
+               onchange="this.form.submit();">
+            <option value="">COM_OSCAMPUS_OPTION_SELECT_LESSONTYPE</option>
+        </field>
+
+        <field name="access"
+               type="oscampus.options"
+               options="access"
+               onchange="this.form.submit();">
+            <option value="">COM_OSCAMPUS_OPTION_SELECT_ACCESS</option>
+        </field>
+    </fields>
+
+    <fields name="list">
+        <field name="fullordering"
+               type="list"
+               label="COM_OSCAMPUS_LIST_FULL_ORDERING"
+               description="COM_OSCAMPUS_LIST_FULL_ORDERING_DESC"
+               onchange="this.form.submit();"
+               default="lesson.title ASC">
+            <option value="">COM_OSCAMPUS_SORT_HEADING</option>
+            <option value="lesson.ordering ASC">COM_OSCAMPUS_SORT_ORDERING_ASC</option>
+            <option value="lesson.ordering DESC">COM_OSCAMPUS_SORT_ORDERING_DESC</option>
+            <option value="lesson.published ASC">COM_OSCAMPUS_SORT_PUBLISHED_ASC</option>
+            <option value="lesson.published DESC">COM_OSCAMPUS_SORT_PUBLISHED_DESC</option>
+            <option value="module.title ASC">COM_OSCAMPUS_SORT_MODULE_ASC</option>
+            <option value="module.title DESC">COM_OSCAMPUS_SORT_MODULE_DESC</option>
+            <option value="lesson.title ASC">COM_OSCAMPUS_SORT_TITLE_ASC</option>
+            <option value="lesson.title DESC">COM_OSCAMPUS_SORT_TITLE_DESC</option>
+            <option value="lesson.type ASC">COM_OSCAMPUS_SORT_LESSON_TYPE_ASC</option>
+            <option value="lesson.type DESC">COM_OSCAMPUS_SORT_LESSON_TYPE_DESC</option>
+            <option value="lesson_view.title ASC">COM_OSCAMPUS_SORT_ACCESS_ASC</option>
+            <option value="lesson_view.title DESC">COM_OSCAMPUS_SORT_ACCESS_DESC</option>
+            <option value="course.published ASC">COM_OSCAMPUS_SORT_COURSE_PUBLISHED_ASC</option>
+            <option value="course.published DESC">COM_OSCAMPUS_SORT_COURSE_PUBLISHED_DESC</option>
+            <option value="course.title ASC">COM_OSCAMPUS_SORT_COURSE_TITLE_ASC</option>
+            <option value="course.title DESC">COM_OSCAMPUS_SORT_COURSE_TITLE_DESC</option>
+            <option value="lesson.id ASC">COM_OSCAMPUS_SORT_ID_ASC</option>
+            <option value="lesson.id DESC">COM_OSCAMPUS_SORT_ID_DESC</option>
+        </field>
+
+        <field name="limit"
+               type="limitbox"
+               class="input-mini"
+               default="25"
+               onchange="this.form.submit();"/>
+    </fields>
+</form>

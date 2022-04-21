@@ -1,0 +1,79 @@
+{#
+ # @package   OSCampus
+ # @contact   www.joomlashack.com, help@joomlashack.com
+ # @copyright 2015-2021 Joomlashack.com. All rights reserved
+ # @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ #
+ # This file is part of OSCampus.
+ #
+ # OSCampus is free software: you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by
+ # the Free Software Foundation, either version 2 of the License, or
+ # (at your option) any later version.
+ #
+ # OSCampus is distributed in the hope that it will be useful,
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ # GNU General Public License for more details.
+ #
+ # You should have received a copy of the GNU General Public License
+ # along with OSCampus.  If not, see <http://www.gnu.org/licenses/>.
+ #}
+
+{% extends 'admin_base.html.twig' %}
+
+{% import 'admin_list_macros.html.twig' as list_macro %}
+
+{% block page_setup %}
+    {{ parent() }}
+    {{ html('behavior.multiselect')|raw }}
+{% endblock %}
+
+{% block main_content %}
+    <form action="{{ uri }}"
+          method="post"
+          name="adminForm"
+          id="adminForm">
+
+        {% include ('admin_filters.html.twig') %}
+
+        {% if not items %}
+            <div class="alert alert-no-items">
+                {{ 'COM_OSCAMPUS_NO_MATCHING_RESULTS'|lang }}
+            </div>
+        {% else %}
+            <table id="admintable" class="table table-striped adminlist">
+                <thead>
+                {% block list_head_upper %}{% endblock %}
+                <tr>
+                    {% block list_head %}
+                        <th></th>
+                    {% endblock %}
+                </tr>
+                </thead>
+
+                <tbody>
+                {% for item in items %}
+                    <tr class="row{{ loop.index0 % 2 }}" sortable-group-id="{{ view.getSortGroupId(item) }}">
+                        {% block list_item %}
+                            <td></td>
+                        {% endblock %}
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            {% if pagination %}
+                {{ pagination.getListFooter()|raw }}
+            {% endif %}
+        {% endif %}
+
+        {% block list_hidden %}
+            <input type="hidden" name="task" value="{{ task }}"/>
+            <input type="hidden" name="boxchecked" value="0"/>
+            {{ html('form.token')|raw }}
+        {% endblock %}
+
+        {{ batchForm|raw }}
+    </form>
+{% endblock %}

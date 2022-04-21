@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<access component="com_oscampus">
+    <section name="component">
+        <action name="core.admin"
+                title="JACTION_ADMIN"
+                description="JACTION_ADMIN_COMPONENT_DESC"/>
+
+        <action name="core.manage"
+                title="JACTION_MANAGE"
+                description="JACTION_MANAGE_COMPONENT_DESC"/>
+
+        <action name="core.tools"
+                title="COM_OSCAMPUS_ACTION_TOOLS"
+                description="COM_OSCAMPUS_ACTION_TOOLS_DESC"/>
+
+        <action name="video.download"
+                title="COM_OSCAMPUS_ACTION_VIDEO_DOWNLOAD"
+                description="COM_OSCAMPUS_ACTION_VIDEO_DOWNLOAD_DESC"/>
+
+        <action name="pathway.user"
+                title="COM_OSCAMPUS_ACTION_PATHWAY_USER"
+                description="COM_OSCAMPUS_ACTION_PATHWAY_USER_DESC"/>
+    </section>
+</access>

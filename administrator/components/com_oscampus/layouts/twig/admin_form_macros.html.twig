@@ -1,0 +1,47 @@
+{#
+ # @package   OSCampus
+ # @contact   www.joomlashack.com, help@joomlashack.com
+ # @copyright 2015-2021 Joomlashack.com. All rights reserved
+ # @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ #
+ # This file is part of OSCampus.
+ #
+ # OSCampus is free software: you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by
+ # the Free Software Foundation, either version 2 of the License, or
+ # (at your option) any later version.
+ #
+ # OSCampus is distributed in the hope that it will be useful,
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ # GNU General Public License for more details.
+ #
+ # You should have received a copy of the GNU General Public License
+ # along with OSCampus.  If not, see <http://www.gnu.org/licenses/>.
+ #}
+
+{% macro tabs_startset(form, params = []) %}
+    {{ html('bootstrap.startTabSet', form.getName()|clean('alnum'), params)|raw }}
+{% endmacro %}
+
+{% macro tabs_add(form, fieldset_name, label = '') %}
+    {% set fieldset = attribute(form.getFieldsets(), fieldset_name) ?: {'label' : fieldset_name, 'name' : fieldset_name} %}
+    {% set label = label ?: fieldset.label %}
+    {{ html('bootstrap.addTab', form.getName()|clean('alnum'), fieldset.name ~ '-panel', label|lang)|raw }}
+{% endmacro %}
+
+{% macro render_fieldset(form, fieldset_name, legend = true, span = '12') %}
+    {{ html('osc.render.adminfieldset', form, fieldset_name, legend, span)|raw }}
+{% endmacro %}
+
+{% macro render_field(form, field_name, legend = true, span = '12') %}
+    {{ html('osc.render.adminfield', form.getField(field_name), legend, span)|raw }}
+{% endmacro %}
+
+{% macro tabs_end() %}
+    {{ html('bootstrap.endtab')|raw }}
+{% endmacro %}
+
+{% macro tabs_endset() %}
+    {{ html('bootstrap.endTabSet')|raw }}
+{% endmacro %}

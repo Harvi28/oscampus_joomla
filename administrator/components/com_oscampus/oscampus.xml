@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+    <name>COM_OSCAMPUS</name>
+    <author>Joomlashack</author>
+    <authorEmail>help@joomlashack.com</authorEmail>
+    <authorUrl>https://www.joomlashack.com/</authorUrl>
+    <copyright>Copyright 2015-2021 Joomlashack.com. All rights reserved.</copyright>
+    <license>GNU GPL; see LICENSE file</license>
+    <description>COM_OSCAMPUS_COMPONENT_DESCRIPTION</description>
+    <version>2.1.6</version>
+    <creationDate>July 09 2021</creationDate>
+    <variant>PRO</variant>
+
+    <scriptfile>script.install.php</scriptfile>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install/mysql/install.sql</file>
+        </sql>
+    </install>
+
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install/mysql/uninstall.sql</file>
+        </sql>
+    </uninstall>
+
+    <update>
+        <schemas>
+            <schemapath type="mysql" charset="utf8">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+
+    <media destination="com_oscampus" folder="media">
+        <folder>css</folder>
+        <folder>fonts</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+
+        <filename>.htaccess</filename>
+    </media>
+
+    <files folder="site">
+        <folder>controllers</folder>
+        <folder>language</folder>
+        <folder>layouts</folder>
+        <folder>models</folder>
+        <folder>themes</folder>
+        <folder>views</folder>
+
+        <filename>controller.php</filename>
+        <filename>oscampus.php</filename>
+        <filename>router.php</filename>
+    </files>
+
+    <administration>
+        <menu img="../media/com_oscampus/images/icon-16-oscampus.png">COM_OSCAMPUS_ADMINMENU</menu>
+
+        <files folder="admin">
+            <folder>controllers</folder>
+            <folder>form</folder>
+            <folder>language</folder>
+            <folder>layouts</folder>
+            <folder>library</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>vendor</folder>
+            <folder>views</folder>
+
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>include.php</filename>
+            <filename>oscampus.php</filename>
+        </files>
+    </administration>
+
+    <alledia>
+        <element>oscampus</element>
+        <namespace>Oscampus</namespace>
+        <license>pro</license>
+        <targetplatform>3.9</targetplatform>
+        <phpminimum>7.2.5</phpminimum>
+
+        <include>AllediaFreeDefaultFiles</include>
+
+        <minify>
+            <script>extensions/mod_oscampus_pathways/media/js/portfolio.js</script>
+            <script>media/js/admin/embed.js</script>
+            <script>media/js/admin/files.js</script>
+            <script>media/js/admin/lesson.js</script>
+            <script>media/js/admin/overlays.js</script>
+            <script>media/js/admin/quiz.js</script>
+            <script>media/js/admin/statistics.js</script>
+            <script>media/js/admin/utilities.js</script>
+            <script>media/js/lesson.js</script>
+            <script>media/js/quiz.js</script>
+            <script>media/js/statistics.js</script>
+            <script>media/js/utilities.js</script>
+            <script>media/js/video.js</script>
+            <script>media/js/vimeo.js</script>
+            <script>media/js/wistia.js</script>
+        </minify>
+
+        <relatedExtensions downgrade="true">
+            <extension type="library"
+                       element="allediaframework"
+                       downgrade="false">AllediaFramework</extension>
+
+            <extension type="plugin"
+                       group="system"
+                       element="osmylicensesmanager"
+                       downgrade="false"
+                       publish="true"
+                       ordering="last">OSMyLicensesManager</extension>
+
+            <extension type="plugin"
+                       group="user"
+                       publish="true"
+                       uninstall="true"
+                       element="oscampus">plg_user_oscampus</extension>
+
+            <extension type="plugin"
+                       group="search"
+                       uninstall="true"
+                       element="oscampus">plg_search_oscampus</extension>
+
+            <extension type="module"
+                       uninstall="true"
+                       element="oscampus_pathways">mod_oscampus_pathways</extension>
+
+            <extension type="module"
+                       uninstall="true"
+                       element="oscampus_search">mod_oscampus_search</extension>
+
+            <extension type="module"
+                       uninstall="true"
+                       element="oscampus_latest">mod_oscampus_latest</extension>
+        </relatedExtensions>
+
+        <obsolete>
+            <folder>administrator/components/com_oscampus/library/joomla/helper</folder>
+            <folder>administrator/components/com_oscampus/library/joomla/utilities</folder>
+            <folder>administrator/components/com_oscampus/vendor/joomla</folder>
+            <folder>administrator/components/com_oscampus/vendor/mobiledetect</folder>
+            <folder>administrator/components/com_oscampus/vendor/tecnick.com</folder>
+            <folder>administrator/components/com_oscampus/views/dashboard</folder>
+            <folder>components/com_oscampus/views/certificate/tmpl</folder>
+            <folder>components/com_oscampus/views/dashboard</folder>
+
+            <file>administrator/components/com_oscampus/controllers/import.php</file>
+            <file>administrator/components/com_oscampus/layouts/admin_filters_j2.html.twig</file>
+            <file>administrator/components/com_oscampus/layouts/admin_filters_j3.html.twig</file>
+            <file>administrator/components/com_oscampus/library/html/grid.php</file>
+            <file>administrator/components/com_oscampus/library/html/tabs.php</file>
+            <file>administrator/components/com_oscampus/library/joomla/view/pdf.php</file>
+            <file>administrator/components/com_oscampus/library/oscampus/Lesson/ActivityStatus.php</file>
+            <file>administrator/components/com_oscampus/library/oscampus/Lesson/ActivitySummary.php</file>
+            <file>administrator/components/com_oscampus/library/oscampus/Lesson/Type/Wistia/Api.php</file>
+            <file>administrator/components/com_oscampus/library/oscampus/Lesson/Type/Wistia/Download.php</file>
+            <file>administrator/components/com_oscampus/models/fields/tcpfont.php</file>
+            <file>administrator/components/com_oscampus/view/course/metadata.xml</file>
+            <file>administrator/language/en-GB/en-GB.plg_osmap_com_oscampus.ini</file>
+            <file>administrator/language/fr-FR/fr-FR.plg_osmap_com_oscampus.ini</file>
+            <file>components/com_oscampus/controllers/activity.json.php</file>
+            <file>components/com_oscampus/controllers/filter.php</file>
+            <file>components/com_oscampus/models/certificate.php</file>
+            <file>components/com_oscampus/models/courses.php</file>
+            <file>components/com_oscampus/models/dashboard.php</file>
+            <file>components/com_oscampus/views/certificate/view.pdf.php</file>
+            <file>components/com_oscampus/views/lesson/tmpl/default_footer.php</file>
+            <file>components/com_oscampus/views/lesson/tmpl/default_header.php</file>
+            <file>components/com_oscampus/views/lesson/tmpl/text.php</file>
+            <file>components/com_oscampus/views/lesson/tmpl/wistia.php</file>
+            <file>components/com_oscampus/views/mycertificates/metadata.xml</file>
+            <file>components/com_oscampus/views/mycourses/metadata.xml</file>
+            <file>components/com_oscampus/views/newcourses/metadata.xml</file>
+            <file>components/com_oscampus/views/pathway/tmpl/default_course.php</file>
+            <file>components/com_oscampus/views/pathways/metadata.xml</file>
+            <file>components/com_oscampus/views/pathways/tmpl/default_pathway.php</file>
+            <file>components/com_oscampus/views/search/metadata.xml</file>
+            <file>components/com_oscampus/views/search/tmpl/default_courses.php</file>
+            <file>components/com_oscampus/views/search/tmpl/default_lesson.php</file>
+            <file>components/com_oscampus/views/search/tmpl/default_lessons.php</file>
+            <file>components/com_oscampus/views/search/tmpl/default_pathways.php</file>
+            <file>media/com_oscampus/css/jquery-ui-uncompressed.css</file>
+            <file>media/com_oscampus/images/embed-bg.jpg</file>
+            <file>media/com_oscampus/images/lesson-placeholder.png</file>
+            <file>media/com_oscampus/images/quiz-bg.jpg</file>
+            <file>media/com_oscampus/images/text-bg.jpg</file>
+            <file>media/com_oscampus/images/wistia-extra-controls.png</file>
+            <file>media/com_oscampus/js/jquery-noconflict.js</file>
+            <file>media/com_oscampus/js/jquery-ui-uncompressed.js</file>
+            <file>media/com_oscampus/js/jquery-uncompressed.js</file>
+            <file>media/com_oscampus/js/jquery.js</file>
+            <file>media/com_oscampus/js/screenfull-uncompressed.js</file>
+            <file>media/com_oscampus/js/screenfull.js</file>
+            <file>media/com_oscampus/js/screenfull.min.js</file>
+
+            <extension type="plugin"
+                       group="osmap"
+                       element="com_oscampus"/>
+        </obsolete>
+    </alledia>
+
+    <updateservers>
+        <server type="extension" priority="1" name="Stable Release"><![CDATA[https://deploy.ostraining.com/client/update/pro/stable/com_oscampus/]]></server>
+    </updateservers>
+</extension>

@@ -1,0 +1,40 @@
+@page { margin-top: 50px;}
+header {
+    position: fixed;
+    top: 0cm;
+    left: 0cm;
+    right: 0cm;
+    height: 10cm;
+    top: -40px; 
+}
+body{
+    margin-top: 20px;
+}
+.sign{
+    position: fixed;
+    bottom: 1cm;
+    left: 0cm; 
+    right: 0cm;
+    font-size: 10px;
+    text-align: center;
+}
+/** Define the footer rules **/
+footer {
+    position: fixed; 
+    bottom: 0cm; 
+    left: 0cm; 
+    right: 0cm;
+    height: 1cm;
+}
+hr{
+    border: 1px solid #000;
+}
+.gstno, .email,.website{
+    font-size: 14px;
+}
+.email,.website{
+    padding-left: 70px;
+}
+.rtrans{
+    font-size: 9px;
+}

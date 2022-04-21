@@ -1,0 +1,28 @@
+{#
+ # @package    OSCampus
+ # @contact    www.joomlashack.com, help@joomlashack.com
+ # @copyright  2015-2018 Joomlashack. All rights reserved
+ # @license    http://www.gnu.org/licenses/gpl.html GNU/GPL
+ #}
+
+{% extends "admin_form.html.twig" %}
+
+{% block form_header %}
+    {{ html('osc.render.formfield', form.getField('title'))|raw }}
+{% endblock %}
+
+{% block form_body %}
+    {{ form_macro.tabs_startset(form, {'active' : 'main-panel'}) }}
+
+    {{ form_macro.tabs_add(form, 'main') }}
+    <div class="form-vertical">
+        {{ form_macro.render_fieldset(form, 'main', false) }}
+    </div>
+    {{ form_macro.tabs_end() }}
+
+    {{ form_macro.tabs_add(form, 'settings') }}
+    {{ form_macro.render_fieldset(form, 'settings', false) }}
+    {{ form_macro.tabs_end() }}
+
+    {{ form_macro.tabs_endset() }}
+{% endblock %}

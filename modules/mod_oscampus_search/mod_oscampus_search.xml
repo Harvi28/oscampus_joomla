@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" method="upgrade" client="site">
+    <name>MOD_OSCAMPUS_SEARCH</name>
+    <author>Joomlashack</author>
+    <creationDate>July 09 2021</creationDate>
+    <copyright>Copyright 2015-2021 Joomlashack.com. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>help@joomlashack.com</authorEmail>
+    <authorUrl>http://www.joomlashack.com</authorUrl>
+    <version>2.1.6</version>
+    <description>MOD_OSCAMPUS_SEARCH_DESC</description>
+
+    <files>
+        <folder>language</folder>
+        <folder>oscampus</folder>
+        <folder>tmpl</folder>
+        <filename>include.php</filename>
+        <filename module="mod_oscampus_search">mod_oscampus_search.php</filename>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="advanced">
+                <field name="layout"
+                       type="modulelayout"
+                       label="JFIELD_ALT_LAYOUT_LABEL"
+                       description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+
+                <field name="moduleclass_sfx"
+                       type="textarea"
+                       label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                       description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+                       rows="3"/>
+
+                <field name="cache"
+                       type="list"
+                       label="COM_MODULES_FIELD_CACHING_LABEL"
+                       description="COM_MODULES_FIELD_CACHING_DESC"
+                       default="1"
+                       filter="integer">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field name="cache_time"
+                       type="number"
+                       label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                       description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+                       default="900"
+                       filter="integer"/>
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>

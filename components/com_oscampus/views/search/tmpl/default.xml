@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata addfieldpath="/administrator/components/com_oscampus/models/fields">
+    <layout title="COM_OSCAMPUS_VIEW_SEARCH_DEFAULT_TITLE">
+        <message>
+            <![CDATA[COM_OSCAMPUS_VIEW_SEARCH_DEFAULT_DESC]]>
+        </message>
+    </layout>
+
+    <fields name="params">
+        <fieldset name="basic">
+            <field name="list_limit"
+                   type="oscampus.limit"
+                   label="COM_OSCAMPUS_LIST_LIMIT"
+                   default="-2"/>
+        </fieldset>
+    </fields>
+</metadata>

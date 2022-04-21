@@ -1,0 +1,1512 @@
+/* General
+ ========================================================================== */
+#oscampus.osc-container {
+  color: #333333;
+  text-align: left;
+}
+
+#oscampus.osc-container .video_overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: grid;
+  align-items: center;
+}
+
+#oscampus.osc-container .video_overlay > .wrapper {
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 22px;
+  line-height: 28px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 32px 0 26px;
+}
+
+#oscampus.osc-container .video_overlay > .wrapper > div {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+#oscampus.osc-container .video_overlay > .wrapper > a {
+  color: #feb123;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+#oscampus.osc-container .video_overlay > .wrapper > a:hover,
+#oscampus.osc-container .video_overlay > .wrapper > a:focus,
+#oscampus.osc-container .video_overlay > .wrapper > a:active {
+  color: #feb123;
+}
+
+#oscampus.osc-container .video_overlay > .wrapper > a span {
+  display: inline-block;
+  font-family: FontAwesome;
+  margin-right: 5px;
+}
+
+#oscampus.osc-container .video_overlay > .wrapper > a span[id^="subscribe_icon_"]:before {
+  content: "\f148";
+}
+
+#oscampus.osc-container .video_overlay > .wrapper > a span[id^="resume_skip_arrow_"]:before {
+  content: "\f04b";
+}
+
+#oscampus.osc-container input,
+#oscampus.osc-container textarea,
+#oscampus.osc-container select {
+  color: #555555;
+}
+
+#oscampus.osc-container p {
+  margin: 0 0 20px;
+}
+
+#oscampus.osc-container div,
+#oscampus.osc-container p {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+#oscampus.osc-container h1,
+#oscampus.osc-container h2,
+#oscampus.osc-container h3,
+#oscampus.osc-container h4 {
+  color: #333333;
+  line-height: 30px;
+  font-weight: 400;
+  margin: 20px 0;
+  padding: 5px 0;
+  text-transform: none;
+}
+
+#oscampus.osc-container h1 {
+  font-size: 35px;
+  line-height: 40px;
+}
+
+#oscampus.osc-container h2 {
+  margin: 0 0 7px 0;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 35px;
+  padding: 0;
+}
+
+#oscampus.osc-container h3 {
+  font-size: 25px;
+  line-height: 30px;
+}
+
+#oscampus.osc-container h4 {
+  font-size: 16px;
+  line-height: 21px;
+  margin: 0 0 20px 0;
+  padding: 0 0 5px 0;
+}
+
+#oscampus.osc-container .page-header {
+  border: 0;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+#oscampus.osc-container .page-header h1 {
+  font-size: 40px;
+  line-height: 50px;
+  margin: 10px 0 30px 0;
+}
+
+.osc-module-container a,
+#oscampus.osc-container a {
+  -moz-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  text-decoration: none;
+  color: #2184cd;
+}
+
+.osc-module-container a:hover,
+.osc-module-container a:focus,
+.osc-module-container a:active,
+#oscampus.osc-container a:hover,
+#oscampus.osc-container a:focus,
+#oscampus.osc-container a:active {
+  color: #7ebce0;
+  text-decoration: none;
+}
+
+#oscampus.osc-container strong {
+  font-weight: 600;
+}
+
+/* Form elements
+ ========================================================================== */
+.osc-module-container input[type="text"],
+.osc-module-container select,
+#oscampus.osc-container input[type="text"],
+#oscampus.osc-container input[type="email"],
+#oscampus.osc-container input[type="password"],
+#oscampus.osc-container textarea,
+#oscampus.osc-container select {
+  color: #666666;
+  font-size: 13px;
+  margin: 0 0 20px;
+  font-weight: 400;
+  border: 1px solid #999999;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  padding: 9px 10px;
+  width: 90%;
+  background: #ffffff;
+}
+
+.osc-module-container input[type="text"],
+.osc-module-container select {
+  width: 100%;
+  margin: 0 0 10px;
+  padding: 6px 10px;
+  height: 34px;
+  line-height: 18px;
+}
+
+.osc-module-container input[type="text"]:focus,
+.osc-module-container input[type="email"]:focus,
+.osc-module-container input[type="password"]:focus,
+.osc-module-container textarea:focus,
+.osc-module-container select:focus,
+.osc-module-container input:focus:invalid:focus,
+.osc-module-container textarea:focus:invalid:focus,
+.osc-module-container select:focus:invalid:focus,
+#oscampus.osc-container input[type="text"]:focus,
+#oscampus.osc-container input[type="email"]:focus,
+#oscampus.osc-container input[type="password"]:focus,
+#oscampus.osc-container textarea:focus,
+#oscampus.osc-container select:focus,
+#oscampus.osc-container input:focus:invalid:focus,
+#oscampus.osc-container textarea:focus:invalid:focus,
+#oscampus.osc-container select:focus:invalid:focus {
+  color: #666666;
+  border-color: #999999;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  background: #ffffff;
+}
+
+#oscampus.osc-container select {
+  height: 38px;
+}
+
+.osc-module-container input[readonly],
+.osc-module-container input[readonly]:hover,
+.osc-module-container input[readonly]:focus,
+#oscampus.osc-container input[readonly],
+#oscampus.osc-container input[readonly]:hover,
+#oscampus.osc-container input[readonly]:focus {
+  background: #f2f2f2;
+}
+
+#oscampus.osc-container input.small-width,
+#oscampus.osc-container textarea.small-width {
+  width: 55px;
+}
+
+#oscampus.osc-container select.small-width {
+  width: 90px;
+}
+
+#oscampus.osc-container input.medium-width,
+#oscampus.osc-container textarea.medium-width {
+  width: 130px;
+}
+
+#oscampus.osc-container select.medium-width {
+  width: 140px;
+}
+
+.osc-module-container input[type="radio"],
+#oscampus.osc-container input[type="radio"] {
+  margin-bottom: 5px;
+}
+
+.osc-module-container input[type="checkbox"],
+#oscampus.osc-container input[type="checkbox"] {
+  margin: 0 0 2px 0;
+}
+
+.osc-module-container input[type="submit"],
+.osc-module-container button
+#oscampus.osc-container input[type="submit"],
+#oscampus.osc-container button {
+  background: #666666;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 0;
+  padding: 4px 12px;
+  text-align: center;
+  transition: all 0.2s linear 0s;
+  -moz-transition: all 0.2s linear 0s;
+  -webkit-transition: all 0.2s linear 0s;
+  -o-transition: all 0.2s linear 0s;
+  vertical-align: middle;
+  border: none;
+  padding: 9px 15px;
+  margin-bottom: 10px;
+}
+
+.osc-module-container input[type="submit"]:hover,
+.osc-module-container input[type="submit"]:focus,
+.osc-module-container button:hover,
+.osc-module-container button:focus,
+#oscampus.osc-container input[type="submit"]:hover,
+#oscampus.osc-container input[type="submit"]:focus,
+#oscampus.osc-container button:hover,
+#oscampus.osc-container button:focus {
+  background: #999999;
+}
+
+.osc-module-container .osc-btn,
+#oscampus.osc-container .osc-btn,
+#oscampus.osc-container .osc-pagination-list a,
+#oscampus.osc-container .osc-pagination-list span {
+  display: inline-block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  line-height: 30px;
+  min-height: 30px;
+  padding: 0 12px;
+  background: #2184cd;
+  color: #ffffff;
+  box-shadow: inset 0 -1px 0 rgba(32, 61, 97, 0.05);
+  border-radius: 50px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.osc-module-container .osc-btn:hover,
+.osc-module-container .osc-btn:focus,
+#oscampus.osc-container .osc-btn:hover,
+#oscampus.osc-container .osc-btn:focus,
+#oscampus.osc-container .osc-pagination-list a:hover,
+#oscampus.osc-container .osc-pagination-list a:focus,
+#oscampus.osc-container .osc-pagination-list span,
+#oscampus.osc-container .osc-btn.osc-btn-active,
+#oscampus.osc-container .osc-btn.osc-off {
+  background: #7ebce0;
+  box-shadow: 0 1px 4px rgba(32, 61, 97, 0.4) inset;
+  -moz-box-shadow: 0 1px 4px rgba(32, 61, 97, 0.4) inset;
+  -webkit-box-shadow: 0 1px 4px rgba(32, 61, 97, 0.4) inset;
+  -o-box-shadow: 0 1px 4px rgba(32, 61, 97, 0.4) inset;
+  color: #fff;
+}
+
+.osc-module-container .osc-btn-big,
+#oscampus.osc-container .osc-btn-big {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 20px;
+}
+
+.osc-module-container .osc-btn-warning,
+#oscampus.osc-container .osc-btn-warning {
+  background: #ff0000;
+}
+
+.osc-module-container .osc-btn-warning:hover,
+.osc-module-container .osc-btn-warning:focus,
+#oscampus.osc-container .osc-btn-warning:hover,
+#oscampus.osc-container .osc-btn-warning:focus {
+  background: #FF4D4D;
+}
+
+.osc-module-container button[disabled],
+.osc-module-container button[disabled]:hover,
+.osc-module-container button[disabled]:focus,
+#oscampus.osc-container button[disabled],
+#oscampus.osc-container button[disabled]:hover,
+#oscampus.osc-container button[disabled]:focus {
+  box-shadow: 0 0 5px #ccc inset;
+  -moz-box-shadow: 0 0 5px #ccc inset;
+  -webkit-box-shadow: 0 0 5px #ccc inset;
+  -o-box-shadow: 0 0 5px #ccc inset;
+  background: #f2f2f2;
+}
+
+.osc-module-container .osc-btn-main,
+#oscampus.osc-container .osc-btn-main {
+  color: #3f4044;
+  font-weight: 600;
+  background: #feb123;
+}
+
+.osc-module-container .osc-btn-main:hover,
+.osc-module-container .osc-btn-main:focus,
+#oscampus.osc-container .osc-btn-main:hover,
+#oscampus.osc-container .osc-btn-main:focus {
+  box-shadow: 0 1px 4px rgba(32, 61, 97, 0.4) inset;
+  -moz-box-shadow: 0 1px 4px rgba(32, 61, 97, 0.4) inset;
+  -webkit-box-shadow: 0 1px 4px rgba(32, 61, 97, 0.4) inset;
+  -o-box-shadow: 0 1px 4px rgba(32, 61, 97, 0.4) inset;
+  color: #fff;
+  background: #ed8034;
+}
+
+.osc-module-container .osc-btn-group,
+#oscampus.osc-container .osc-btn-group {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  white-space: nowrap;
+}
+
+.osc-module-container .osc-btn-group > *,
+#oscampus.osc-container .osc-btn-group > * {
+  display: inline-block;
+}
+
+.osc-module-container .osc-btn-group .osc-btn,
+#oscampus.osc-container .osc-btn-group .osc-btn {
+  vertical-align: top;
+}
+
+.osc-module-container .osc-btn-group > .osc-btn:not(:first-child):not(:last-child),
+.osc-module-container .osc-btn-group > div:not(:first-child):not(:last-child) .osc-btn,
+.osc-module-container .osc-btn-group > .osc-btn:first-child,
+.osc-module-container .osc-btn-group > div:first-child .osc-btn,
+#oscampus.osc-container .osc-btn-group > .osc-btn:not(:first-child):not(:last-child),
+#oscampus.osc-container .osc-btn-group > div:not(:first-child):not(:last-child) .osc-btn,
+#oscampus.osc-container .osc-btn-group > .osc-btn:first-child,
+#oscampus.osc-container .osc-btn-group > div:first-child .osc-btn {
+  margin-right: 1px;
+}
+
+.osc-module-container .osc-btn-group > .osc-btn:not(:first-child):not(:last-child),
+.osc-module-container .osc-btn-group > div:not(:first-child):not(:last-child) .osc-btn,
+#oscampus.osc-container .osc-btn-group > .osc-btn:not(:first-child):not(:last-child),
+#oscampus.osc-container .osc-btn-group > div:not(:first-child):not(:last-child) .osc-btn {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+.osc-module-container .osc-btn-group > .osc-btn:first-child,
+.osc-module-container .osc-btn-group > div:first-child .osc-btn,
+#oscampus.osc-container .osc-btn-group > .osc-btn:first-child,
+#oscampus.osc-container .osc-btn-group > div:first-child .osc-btn {
+  border-bottom-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -o-border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  -moz-border-top-right-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -o-border-top-right-radius: 0;
+}
+
+.osc-module-container .osc-btn-group > .osc-btn:last-child,
+.osc-module-container .osc-btn-group > div:last-child .osc-btn,
+#oscampus.osc-container .osc-btn-group > .osc-btn:last-child,
+#oscampus.osc-container .osc-btn-group > div:last-child .osc-btn {
+  border-bottom-left-radius: 0;
+  -moz-border-bottom-left-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -o-border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-border-top-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -o-border-top-left-radius: 0;
+}
+
+.osc-module-container label,
+#oscampus.osc-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: default;
+}
+
+.osc-module-container label span,
+#oscampus.osc-container label span {
+  color: #ff0000;
+}
+
+.osc-module-container a i,
+.osc-module-container button i,
+.osc-module-container input[type="submit"] i,
+#oscampus.osc-container a i,
+#oscampus.osc-container button i,
+#oscampus.osc-container input[type="submit"] i {
+  line-height: inherit;
+}
+
+.osc-module-container .osc-search-toggle {
+  color: #2184cd;
+}
+
+.osc-module-container .osc-clear-filters {
+  margin-top: 10px;
+}
+
+.osc-module-container input[type="text"].osc-formfield-inactive,
+.osc-module-container select.osc-formfield-inactive {
+  border-color: #ccc;
+  color: #999;
+}
+
+.osc-module-container input[type="text"].osc-formfield-active,
+.osc-module-container select.osc-formfield-active {
+  border-color: #333;
+  color: #333;
+}
+
+.osc-module-container .osc-search-advanced {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* Help classes
+ ========================================================================== */
+.osc-module-container div.osc-alert-warning,
+#oscampus.osc-container div.osc-alert-warning {
+  background: #fff1f0;
+  border: 1px solid rgba(216, 80, 48, 0.2);
+  color: #d85030;
+  padding: 15px;
+  margin: 2px 0;
+}
+
+.osc-module-container div.osc-alert-success,
+#oscampus.osc-container div.osc-alert-success {
+  background: #f2fae3;
+  border: 1px solid rgba(101, 159, 19, 0.2);
+  color: #659f13;
+  padding: 15px;
+  margin: 2px 0;
+}
+
+.osc-module-container div.osc-alert-notify,
+#oscampus.osc-container div.osc-alert-notify {
+  background: #ebf7fd;
+  border: 1px solid rgba(45, 112, 145, 0.2);
+  color: #2d7091;
+  padding: 15px;
+  margin: 2px 0;
+}
+
+#oscampus.osc-container .osc-alert-warning.m-bottom,
+#oscampus.osc-container .osc-alert-success.m-bottom,
+#oscampus.osc-container .osc-alert-notify.m-bottom {
+  margin-bottom: 40px;
+}
+
+/* Listing
+ ========================================================================== */
+#oscampus.osc-container .osc-table {
+  border-top: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+  border-left: 1px solid #f2f2f2;
+}
+
+#oscampus.osc-container #content-teacher .osc-table div {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+#oscampus.osc-container .osc-row-one {
+  background: #ffffff;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+#oscampus.osc-container .osc-row-two {
+  background: #ffffff;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+#oscampus.osc-container .osc-row-one:hover,
+#oscampus.osc-container .osc-row-two:hover {
+  background: rgba(242, 242, 242, 0.3);
+}
+
+#oscampus.osc-container .osc-row-one [class*="block"],
+#oscampus.osc-container .osc-row-two [class*="block"] {
+  padding: 6px 10px;
+}
+
+#oscampus.osc-container .osc-row-heading [class*="block"] {
+  padding: 10px;
+  font-weight: bold;
+}
+
+#oscampus.osc-container .p-left-x[class*="block"] {
+  padding-left: 20px;
+}
+
+#oscampus.osc-container .p-left-xx[class*="block"] {
+  padding-left: 38px;
+}
+
+#oscampus.osc-container .osc-row-one [class*="block"] label,
+#oscampus.osc-container .osc-row-two [class*="block"] label {
+  margin: 0;
+}
+
+#oscampus.osc-container .osc-row-one.m-bottom,
+#oscampus.osc-container .osc-row-two.m-bottom {
+  margin-bottom: 50px;
+}
+
+#oscampus.osc-container .osc-row-one a,
+#oscampus.osc-container .osc-row-two a {
+  text-decoration: none;
+}
+
+#oscampus.osc-container .osc-row-one a:hover,
+#oscampus.osc-container .osc-row-two a:hover,
+#oscampus.osc-container .osc-row-one a:focus,
+#oscampus.osc-container .osc-row-two a:focus,
+#oscampus.osc-container .osc-row-one a:active,
+#oscampus.osc-container .osc-row-two a:active {
+  text-decoration: none;
+  color: #41a1d6;
+}
+
+#oscampus.osc-container a.osc-btn i:before,
+#oscampus.osc-container button.osc-btn i:before,
+#oscampus.osc-container a.osc-btn-main:hover i:before,
+#oscampus.osc-container button.osc-btn-main:hover i:before,
+#oscampus.osc-container a.osc-btn-main:focus i:before,
+#oscampus.osc-container button.osc-btn-main:focus i:before {
+  color: #fff;
+}
+
+#oscampus.osc-container a.osc-btn-main i:before,
+#oscampus.osc-container button.osc-btn-main i:before {
+  color: #3f4044;
+}
+
+#oscampus.osc-container .osc-row-heading {
+  background: rgba(242, 242, 242, 0.3);
+  border-bottom: 1px solid #f2f2f2;
+}
+
+#oscampus.osc-container .osc-progress-bar {
+  display: block;
+  width: 100%;
+  background: #f2f2f2;
+  overflow: hidden;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+#oscampus.osc-container .osc-progress-bar > span {
+  display: block;
+  overflow: hidden;
+  background: #706560;
+}
+
+#oscampus.osc-container .osc-progress-bar > span.osc-progress-bar-completed {
+  background: #2184cd;
+}
+
+#oscampus.osc-container .osc-progress-bar > span > span {
+  margin: 0 10px;
+  color: #fff;
+  font-size: 10px;
+  text-shadow: 0 0 2px #000;
+}
+
+#oscampus.osc-container .oscampus-lesson-files .osc-section a:before {
+  content: "\f0ed";
+  font-family: FontAwesome;
+  margin-right: 6px;
+}
+
+/* Teacher
+ ========================================================================== */
+#oscampus.osc-container .osc-teacher-image {
+  float: left;
+  margin: 5px 20px 10px 0;
+  width: 200px;
+  height: auto;
+}
+
+#oscampus.osc-container .osc-teacher-links > span {
+  margin-right: 10px;
+}
+
+#oscampus.osc-container .osc-teacher-description {
+  display: table;
+  margin-top: 20px;
+}
+
+/* Pathways
+ ========================================================================== */
+#oscampus.osc-container .osc-section .block4.osc-course-image,
+#oscampus.osc-container .osc-section .block4.osc-pathway-image {
+  width: 27.623931623931625%;
+}
+
+#oscampus.osc-container .osc-section .block8.osc-course-description,
+#oscampus.osc-container .osc-section .block8.osc-pathway-description {
+  width: 69.81196581196582%;
+}
+
+#oscampus.osc-container .block8.osc-pathway-description > .osc-pathway-description-inner {
+  padding: 20px 20px 20px 0;
+}
+
+#oscampus.osc-container .osc-course-description p:last-child,
+#oscampus.osc-container .osc-pathway-description p:last-child {
+  margin-bottom: 0;
+}
+
+#oscampus.osc-container .osc-pathway-list {
+  background: #eee;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.osc-module-pathways ul {
+  list-style: none;
+  margin: 0;
+}
+
+.osc-module-pathways ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.osc-module-pathways > ul > li {
+  border-bottom: 1px solid #f2f2f2;
+  padding: 10px 0;
+}
+
+.osc-module-pathways > ul > li > a {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.osc-module-pathways > ul > li:last-of-type {
+  border-bottom: none;
+}
+
+.osc-module-pathways > ul > li > ul {
+  margin-top: 5px;
+}
+
+.osc-module-pathways > ul > li > ul > li > a:before {
+  content: "—";
+  margin-right: 5px;
+  left: 20px;
+  display: inline-block;
+}
+
+.osc-module-pathways-portfolio #osc-portfolio-filters {
+  padding: 0;
+  text-align: center;
+  position: relative;
+  display: block;
+}
+
+.osc-module-pathways-portfolio #osc-portfolio-filters.osc-portfolio-filters--top {
+  margin-bottom: 16px;
+}
+
+.osc-module-pathways-portfolio #osc-portfolio-filters.osc-portfolio-filters--bottom {
+  margin-top: 16px;
+}
+
+.osc-module-pathways-portfolio #osc-portfolio-filters .osc-btn {
+  outline: none;
+  margin: 4px 2px;
+}
+
+.osc-module-pathways-portfolio:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.osc-module-pathways-portfolio .osc-portfolio-element-item {
+  margin-bottom: 20px;
+}
+
+.osc-module-pathways-portfolio .osc-portfolio-element-item h3 {
+  background: #f2f2f2;
+  margin: 0;
+  padding: 10px 20px;
+  border-bottom: 2px solid #555;
+}
+
+/* Single Pathway
+ ========================================================================== */
+
+#oscampus.osc-container .osc-pathway-intro {
+  background: #eee;
+  color: #333;
+  padding: 30px;
+  margin-bottom: 5px;
+}
+
+#oscampus.osc-container .osc-pathway-intro > p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Courses
+ ========================================================================== */
+#oscampus.osc-container .osc-course-list {
+  border-bottom: 1px solid #f2f2f2;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+}
+
+#oscampus.osc-container .osc-course-image img {
+  margin-top: 3px;
+}
+
+#oscampus.osc-container .osc-course-item {
+  margin-bottom: 10px;
+}
+
+#oscampus.osc-container .osc-course-start {
+  text-align: right;
+}
+
+#oscampus.osc-container .osc-course-info {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+#oscampus.osc-container .osc-course-details {
+  margin-bottom: 30px;
+  padding: 12px 15px 15px;
+  border: 1px solid #f2f2f2;
+}
+
+/* Tabs
+ ========================================================================== */
+#oscampus.osc-container .osc-section.osc-course-tabs > div {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-bottom-width: 0;
+  margin-left: 0;
+  margin-right: 3px;
+  background: #ffffff;
+  text-align: center;
+  padding: 6px 14px;
+  width: auto;
+  border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+  -o-border-radius: 4px 4px 0 0;
+  box-shadow: 0 1px 0 #f2f2f2 inset;
+  -moz-box-shadow: 0 1px 0 #f2f2f2 inset;
+  -webkit-box-shadow: 0 1px 0 #f2f2f2 inset;
+  -o-box-shadow: 0 1px 0 #f2f2f2 inset;
+}
+
+#oscampus.osc-container .osc-section.osc-course-tabs > div:first-child {
+  margin-left: 3px;
+}
+
+#oscampus.osc-container .osc-section.osc-course-tabs > div.osc-tab-disabled {
+  background: #f5f5f5;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 -1px 0 #ccc inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 -1px 0 #ccc inset;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 -1px 0 #ccc inset;
+  -o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 -1px 0 #ccc inset;
+}
+
+#oscampus.osc-container .osc-course-tabs > div {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#oscampus.osc-container .osc-course-tabs > div.osc-tab-disabled:hover {
+  background-color: #7ebce0;
+  border-color: #7ebce0;
+  color: #ffffff;
+}
+
+#oscampus.osc-container .osc-course-tabs > div.osc-tab-disabled > a:hover,
+#oscampus.osc-container .osc-course-tabs > div.osc-tab-disabled:hover a {
+  color: #ffffff;
+}
+
+#oscampus.osc-container .osc-course-tabs > div.osc-tab-disabled:hover {
+  background-color: #7ebce0;
+  border-color: #7ebce0;
+}
+
+#oscampus.osc-container .osc-course-tabs-content {
+  border: 1px solid #cccccc;
+  margin-top: -1px;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+#oscampus.osc-container .osc-check-viewed {
+  text-align: right;
+  color: #999999;
+  font-size: 12px;
+}
+
+/* Labels
+ ========================================================================== */
+#oscampus.osc-container .osc-label {
+  background-color: #eee;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+#oscampus.osc-container .osc-label-small {
+  padding: 0px 6px;
+  line-height: 18px;
+  margin: 0;
+}
+
+#oscampus.osc-container .osc-check-viewed > .osc-label {
+  min-width: 100px;
+}
+
+#oscampus.osc-container .osc-label-failed {
+  color: #942a25;
+  background: #f6dddb;
+}
+
+#oscampus.osc-container .osc-label-viewed,
+#oscampus.osc-container .osc-label-passed {
+  color: #378137;
+  background: #dff1df;
+}
+
+/* Lesson
+ ========================================================================== */
+#oscampus.osc-container .osc-lesson-navigation,
+#oscampus.osc-container .osc-lesson-options {
+  z-index: 2;
+}
+
+#oscampus.osc-container .osc-lesson-navigation .osc-btn,
+#oscampus.osc-container .osc-lesson-options .osc-btn {
+  transition: opacity 0.4s ease 0s;
+  -moz-transition: opacity 0.4s ease 0s;
+  -webkit-transition: opacity 0.4s ease 0s;
+  -o-transition: opacity 0.4s ease 0s;
+}
+
+#oscampus.oscampus-default .osc-lesson-navigation,
+#oscampus.oscampus-embed .osc-lesson-navigation,
+#oscampus.oscampus-quiz .osc-lesson-navigation {
+  float: right;
+}
+
+#oscampus.oscampus-video .osc-lesson-navigation {
+  right: 10px;
+  top: 10px;
+}
+
+#oscampus.oscampus-default .osc-lesson-links {
+  margin-bottom: 10px;
+}
+
+#oscampus.osc-container .osc-lesson-options {
+  left: 10px;
+  top: 10px;
+  float: left;
+}
+
+#oscampus.osc-container .osc-lesson-options .fa {
+  margin-right: 4px;
+}
+
+#oscampus.osc-container .osc-lesson-options .osc-btn {
+  cursor: pointer;
+}
+
+#oscampus.osc-container .osc-lesson-options .osc-btn.osc-visible,
+#oscampus.osc-container .osc-lesson-navigation .osc-btn.osc-visible {
+  opacity: 0.8;
+}
+
+#oscampus.osc-container .osc-lesson-options .osc-btn.osc-hidden,
+#oscampus.osc-container .osc-lesson-navigation .osc-btn.osc-hidden {
+  opacity: 0;
+}
+
+#oscampus.osc-container .osc-free-tag {
+  background: #ed8034;
+  font-size: 12px;
+  margin: 0px 0px 0px 5px;
+  line-height: 16px;
+  display: inline-block;
+  text-align: center;
+  padding: 2px 5px;
+  color: #fff;
+}
+
+#oscampus.osc-container .oscampus-lesson-description {
+  margin-top: 20px;
+}
+
+/* Signup
+ ========================================================================== */
+#oscampus .osc-signup-box {
+  background: #000;
+  position: relative;
+}
+
+#oscampus .osc-signup-box img {
+  opacity: 0.5;
+  width: 100%;
+  height: auto;
+}
+
+#oscampus .osc-signup-box h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#oscampus #signup-overlay {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 90%;
+}
+
+#oscampus .osc-overlay-inner {
+  background: #fff;
+  padding: 30px;
+  width: 60%;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+/* Videos
+ ========================================================================== */
+#oscampus.osc-container .osc-video-overlay {
+  background-color: rgba(48, 48, 48, 0.82);
+  box-shadow: rgba(0, 0, 0, 0.9) 0px 0px 218px 30px inset;
+  color: #fff;
+  display: inline-block;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#e8333333', endColorStr='#e8333333');
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 26px;
+  position: absolute;
+  text-align: center;
+  left: -10px;
+  top: -10px;
+  white-space: normal;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+}
+
+#oscampus.osc-container .osc-video-overlay.osc-visible {
+  opacity: 1;
+}
+
+#oscampus.osc-container .osc-video-overlay div.wrapper {
+  position: relative;
+}
+
+#oscampus.osc-container .osc-video-overlay a {
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 15px;
+  margin: 0 20px;
+  text-decoration: none;
+  display: inline-block;
+  height: 120px;
+  vertical-align: top;
+  width: 80px;
+  zoom: 1;
+}
+
+#oscampus.osc-container .osc-video-overlay a.subscribe span {
+  background: url(../../images/video-extra-controls.png) no-repeat -391px 22px;
+  display: block;
+  height: 80px;
+  width: 80px;
+}
+
+#oscampus.osc-container .osc-video-overlay a.subscribe:hover span {
+  background-position: -468px 22px;
+}
+
+#oscampus.osc-container .osc-video-overlay a.skip span {
+  background-image: url(../../images/skip-icon.png);
+  display: block;
+  height: 80px;
+  width: 80px;
+}
+
+#oscampus.osc-container .osc-video-overlay a.skip:hover span {
+  background-position: 0px -80px;
+}
+
+#oscampus.osc-container .osc-video-overlay a:hover {
+  color: #fff;
+}
+
+/* Quiz
+ ========================================================================== */
+#oscampus.osc-container .osc-quiz-details {
+  border: 1px solid #f2f2f2;
+  margin-bottom: 30px;
+}
+
+#oscampus.osc-container .osc-quiz-left {
+  border-right: 1px solid #f2f2f2;
+  text-align: center;
+}
+
+#oscampus.osc-container .osc-quiz-left,
+#oscampus.osc-container .osc-quiz-right {
+  padding: 30px 15px;
+  font-size: 14px;
+}
+
+#oscampus.osc-container .osc-quiz-right .osc-btn {
+  margin-bottom: 0;
+}
+
+#oscampus.osc-container .osc-quiz-big-icon {
+  padding: 30px 0 30px 30px;
+  text-align: center;
+}
+
+#oscampus.osc-container .osc-quiz-big-icon .fa {
+  font-size: 60px;
+  line-height: 50px;
+}
+
+#oscampus.osc-container .osc-quiz-right {
+  line-height: 28px;
+}
+
+#oscampus.osc-container .osc-positive-color {
+  color: #669900;
+}
+
+#oscampus.osc-container .osc-negative-color {
+  color: #ff0000;
+}
+
+#oscampus.osc-container .osc-quiz-time-labels,
+#oscampus.osc-container .osc-quiz-failed-label {
+  font-size: 18px;
+}
+
+#oscampus.osc-container .osc-quiz-time-left,
+#oscampus.osc-container .osc-quiz-score-label {
+  color: #203d61;
+  font-size: 18px;
+}
+
+#oscampus.osc-container .osc-quiz-time,
+#oscampus.osc-container .osc-quiz-percentage {
+  color: #203d61;
+  font-size: 50px;
+  line-height: 50px;
+  padding-top: 10px;
+}
+
+#oscampus.osc-container .osc-quiz-question h4 {
+  background: #f7f7f7;
+  border-bottom: 1px solid #dadada;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+#oscampus.osc-container .osc-quiz-options {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+#oscampus.osc-container .osc-quiz-options li {
+  line-height: 26px;
+  padding-left: 35px;
+}
+
+#oscampus.osc-container.oscampus-quiz .fa-check {
+  color: #008200;
+}
+
+#oscampus.osc-container.oscampus-quiz .fa-times {
+  color: #ff0000;
+}
+
+#oscampus.osc-container .osc-quiz-question .fa {
+  font-size: 20px;
+}
+
+#oscampus.osc-container .osc-quiz-submit {
+  margin-top: 30px;
+}
+
+/* Pagination
+ ========================================================================== */
+
+#oscampus.osc-container .osc-pagination {
+  margin-top: 40px;
+}
+
+#oscampus.osc-container .osc-pagination-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#oscampus.osc-container .osc-pagination-list li {
+  display: inline-block;
+}
+
+#oscampus.osc-container .osc-pagination-list li a,
+#oscampus.osc-container .osc-pagination-list li span {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
+  margin-right: 1px;
+}
+
+#oscampus.osc-container .osc-pagination-list > li:first-child > a,
+#oscampus.osc-container .osc-pagination-list > li:first-child > span {
+  border-radius: 50px 0 0 50px;
+  -moz-border-radius: 50px 0 0 50px;
+  -webkit-border-radius: 50px 0 0 50px;
+  -o-border-radius: 50px 0 0 50px;
+}
+
+#oscampus.osc-container .osc-pagination-list > li:last-child > a,
+#oscampus.osc-container .osc-pagination-list > li:last-child > span {
+  border-radius: 0 50px 50px 0;
+  -moz-border-radius: 0 50px 50px 0;
+  -webkit-border-radius: 0 50px 50px 0;
+  -o-border-radius: 0 50px 50px 0;
+}
+
+#oscampus.osc-container .osc-pagination-list li i {
+  line-height: 28px;
+}
+
+/* Administration
+ ========================================================================== */
+
+#oscampus.osc-container #osc-data-area > h3 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#oscampus.osc-container.oscampus-statistics .osc-tab a {
+  color: #333;
+}
+
+#oscampus.osc-container.oscampus-statistics .osc-tab a i {
+  width: 20px;
+  text-align: center;
+}
+
+#oscampus.osc-container #osc-data-area .osc-pagination {
+  margin: 0 0 20px;
+}
+
+#oscampus.osc-container .osc-pagination-list {
+  display: inline-block;
+}
+
+#oscampus.osc-container #osc-data-area .osc-table + .osc-pagination {
+  margin: 20px 0 0;
+}
+
+#oscampus.osc-container #osc-data-area .osc-pagination .pagination-box {
+  margin: 0;
+}
+
+#oscampus.osc-container #osc-data-area select#limit {
+  margin-bottom: 0;
+  width: 70px;
+}
+
+#oscampus.osc-container #osc-data-area .fa-check-circle:before {
+  color: #378137;
+}
+
+#oscampus.osc-container #osc-data-area .fa-times-circle:before {
+  color: #942a25;
+}
+
+#oscampus.osc-container #osc-data-area > .osc-btn + .page-header {
+  padding-top: 30px;
+  margin-top: 0;
+}
+
+/* Media queries
+ ========================================================================== */
+@media (min-width: 1200px) {
+  /* pathways */
+  #oscampus.osc-container .osc-section .block4.osc-course-image,
+  #oscampus.osc-container .osc-section .block4.osc-pathway-image {
+    width: 27.623931623931625%;
+  }
+
+  #oscampus.osc-container .osc-section .block8.osc-course-description,
+  #oscampus.osc-container .osc-section .block8.osc-pathway-description {
+    width: 69.81196581196582%;
+  }
+}
+
+@media (max-width: 1199px) {
+  #oscampus.osc-container .osc-section .block4.osc-pathway-image {
+    width: 40.623931623931625%;
+  }
+
+  #oscampus.osc-container .osc-section .block8.osc-pathway-description {
+    width: 56.81196581196582%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  /* pathways */
+  #oscampus.osc-container .osc-section .block4.osc-course-image,
+  #oscampus.osc-container .osc-section .block4.osc-pathway-image {
+    width: 27.623931623931625%;
+  }
+
+  #oscampus.osc-container .osc-section .block8.osc-course-description,
+  #oscampus.osc-container .osc-section .block8.osc-pathway-description {
+    width: 69.81196581196582%;
+    margin-left: 2.56410256410255%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* signup */
+  #oscampus .osc-overlay-inner {
+    padding: 20px;
+    width: 75%;
+  }
+
+  #oscampus #signup-overlay {
+    left: 20px;
+    top: 20px;
+  }
+
+  /* form elements */
+  #oscampus.osc-container input[type="text"],
+  #oscampus.osc-container input[type="email"],
+  #oscampus.osc-container input[type="password"],
+  #oscampus.osc-container textarea,
+  #oscampus.osc-container select {
+    width: 80%;
+  }
+
+  /* tabs */
+  #oscampus.osc-container .osc-section.osc-course-tabs > div {
+    margin-bottom: 2px;
+    border-bottom-width: 1px;
+    margin-right: 0;
+    width: 100%;
+    float: none;
+    text-align: left;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+  }
+
+  #oscampus.osc-container .osc-section.osc-course-tabs > div.osc-tab-disabled {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    -o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  #oscampus.osc-container .osc-section.osc-course-tabs > div:first-child {
+    margin-left: 0;
+  }
+
+  #oscampus.osc-container .osc-tabs-content {
+    margin-top: 0;
+  }
+
+  /* quiz */
+  #oscampus.osc-container .osc-quiz-left {
+    border-bottom: 1px solid #f2f2f2;
+    border-right: none;
+  }
+
+  #oscampus.osc-container .osc-quiz-right {
+    text-align: center;
+  }
+
+  #oscampus.osc-container .osc-quiz-big-icon {
+    padding: 30px 15px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  /* administration */
+  #oscampus.osc-container #osc-data-area select#limit {
+    margin-top: 20px;
+  }
+
+  /* pathways */
+  #oscampus.osc-container .osc-section .block4.osc-pathway-image,
+  #oscampus.osc-container .osc-section .block4.osc-course-image,
+  #oscampus.osc-container .osc-section .block8.osc-course-description,
+  #oscampus.osc-container .osc-section .block8.osc-pathway-description {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #oscampus.osc-container .block8.osc-pathway-description > .osc-pathway-description-inner {
+    padding: 20px;
+  }
+
+  #oscampus.osc-container .osc-course-image img,
+  #oscampus.osc-container .osc-pathway-image img {
+    max-width: 200px;
+  }
+
+  #oscampus.osc-container .osc-course-image img {
+    margin-bottom: 10px;
+  }
+
+  #oscampus.osc-container .osc-course-start {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+  /* labels */
+  #oscampus.osc-container .osc-label {
+    margin-bottom: 4px;
+  }
+
+  /* certificates */
+  #oscampus.oscampus-mycertificates .osc-table .osc-section > .osc-certificate-course {
+    padding-bottom: 0;
+    padding-top: 15px;
+    min-height: 22px;
+  }
+
+  #oscampus.oscampus-mycertificates .osc-table .osc-section > .osc-certificate-date {
+    padding-bottom: 0;
+    padding-top: 0;
+    min-height: 22px;
+    font-size: 11px;
+    color: #666;
+  }
+
+  #oscampus.oscampus-mycertificates .osc-table .osc-section > .osc-certificate-download {
+    min-height: 22px;
+    padding-top: 0;
+    font-weight: bold;
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* general */
+  #oscampus.osc-container h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  #oscampus.osc-container h2 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  #oscampus.osc-container h3 {
+    font-size: 20px;
+    line-height: 24px
+  }
+
+  #oscampus.osc-container h4 {
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+  /* form elements */
+  #oscampus.osc-container input[type="text"],
+  #oscampus.osc-container input[type="email"],
+  #oscampus.osc-container input[type="password"],
+  #oscampus.osc-container textarea,
+  #oscampus.osc-container select {
+    width: 90%;
+  }
+}
+
+/* Generic responsive videos
+ ========================================================================== */
+#oscampus .osc-video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+#oscampus .osc-video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+}

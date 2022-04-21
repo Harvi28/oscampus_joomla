@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="hidden">
+        <field name="id" type="hidden"/>
+        <field name="checked_out" type="hidden" filter="unset"/>
+        <field name="checked_out_time" type="hidden" filter="unset"/>
+    </fieldset>
+
+    <fieldset name="main" label="COM_OSCAMPUS_TEACHER_PAGE_MAIN">
+        <field name="users_id"
+               type="user"
+               label="COM_OSCAMPUS_TEACHER_USER_LABEL"
+               description="COM_OSCAMPUS_TEACHER_USER_DESC"
+               required="true"/>
+
+        <field name="image"
+               type="media"
+               label="COM_OSCAMPUS_TEACHER_IMAGE_LABEL"
+               description="COM_OSCAMPUS_TEACHER_IMAGE_DESC"/>
+
+        <field name="bio"
+               type="editor"
+               label="COM_OSCAMPUS_TEACHER_BIO_LABEL"
+               description="COM_OSCAMPUS_TEACHER_BIO_DESC"
+               required="true"
+               filter="JComponentHelper::filterText"
+               buttons="true"
+               hide="readmore,pagebreak"/>
+    </fieldset>
+
+    <fieldset name="links" label="COM_OSCAMPUS_TEACHER_PAGE_LINKS">
+        <fields name="links">
+            <field name="website"
+                   type="oscampus.links"
+                   label="COM_OSCAMPUS_TEACHER_LINKS_WEBSITE_LABEL"
+                   description="COM_OSCAMPUS_TEACHER_LINKS_URLS_DESC"/>
+
+            <field name="email"
+                   type="oscampus.links"
+                   label="COM_OSCAMPUS_TEACHER_LINKS_EMAIL_LABEL"
+                   description="COM_OSCAMPUS_TEACHER_LINKS_EMAIL_DESC"/>
+
+            <field name="blog"
+                   type="oscampus.links"
+                   label="COM_OSCAMPUS_TEACHER_LINKS_BLOG_LABEL"
+                   description="COM_OSCAMPUS_TEACHER_LINKS_URLS_DESC"/>
+
+            <field name="facebook"
+                   type="oscampus.links"
+                   label="COM_OSCAMPUS_TEACHER_LINKS_FACEBOOK_LABEL"
+                   description="COM_OSCAMPUS_TEACHER_LINKS_FACEBOOK_DESC"/>
+
+            <field name="twitter"
+                   type="oscampus.links"
+                   label="COM_OSCAMPUS_TEACHER_LINKS_TWITTER_LABEL"
+                   description="COM_OSCAMPUS_TEACHER_LINKS_TWITTER_DESC"/>
+
+            <field name="linkedin"
+                   type="oscampus.links"
+                   label="COM_OSCAMPUS_TEACHER_LINKS_LINKEDIN_LABEL"
+                   description="COM_OSCAMPUS_TEACHER_LINKS_LINKEDIN_DESC"/>
+        </fields>
+    </fieldset>
+</form>

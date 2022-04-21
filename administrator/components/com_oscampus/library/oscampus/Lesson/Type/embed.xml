@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <form>
+        <fieldset name="content">
+            <fields name="content">
+                <field name="url"
+                       type="oscampus.embed"
+                       label="COM_OSCAMPUS_EMBED_URL_LABEL"
+                       description="COM_OSCAMPUS_EMBED_URL_DESC"
+                       required="true"/>
+            </fields>
+        </fieldset>
+    </form>
+</metadata>

@@ -1,0 +1,60 @@
+{#
+ # @package   OSCampus
+ # @contact   www.joomlashack.com, help@joomlashack.com
+ # @copyright 2015-2021 Joomlashack.com. All rights reserved
+ # @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ #
+ # This file is part of OSCampus.
+ #
+ # OSCampus is free software: you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by
+ # the Free Software Foundation, either version 2 of the License, or
+ # (at your option) any later version.
+ #
+ # OSCampus is distributed in the hope that it will be useful,
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ # GNU General Public License for more details.
+ #
+ # You should have received a copy of the GNU General Public License
+ # along with OSCampus.  If not, see <http://www.gnu.org/licenses/>.
+ #}
+
+{% extends 'admin_list.html.twig' %}
+
+{% block list_head_upper %}
+    <tr class="head2">
+        <th colspan="8">{{ 'COM_OSCAMPUS_LESSON'|lang }}</th>
+        <th colspan="2">{{ 'COM_OSCAMPUS_COURSE'|lang }}</th>
+    </tr>
+{% endblock %}
+
+{% block list_head %}
+    {{ list_macro.th_checkall() }}
+    {{ list_macro.th_ordering(ordering, items) }}
+    {{ list_macro.th_sort('lesson.published', 'COM_OSCAMPUS_PUBLISHED', ordering.direction, ordering.order) }}
+    {{ list_macro.th_sort('lesson.title', 'COM_OSCAMPUS_TITLE', ordering.direction, ordering.order) }}
+    {{ list_macro.th_sort('module.title', 'COM_OSCAMPUS_MODULE', ordering.direction, ordering.order) }}
+    {{ list_macro.th_sort('lesson.type', 'COM_OSCAMPUS_LESSON_TYPE_LABEL', ordering.direction, ordering.order) }}
+    {{ list_macro.th_sort('lesson_view.title', 'COM_OSCAMPUS_ACCESS_LEVEL', ordering.direction, ordering.order) }}
+    {{ list_macro.th_sort('lesson.id', 'COM_OSCAMPUS_ID', ordering.direction, ordering.order) }}
+    {{ list_macro.th_sort('course.published', 'COM_OSCAMPUS_PUBLISHED', ordering.direction, ordering.order) }}
+    {{ list_macro.th_sort('course.title', 'COM_OSCAMPUS_TITLE', ordering.direction, ordering.order) }}
+{% endblock %}
+
+{% block list_item %}
+    {{ list_macro.td_check(loop.index0, item.id) }}
+    {{ list_macro.td_ordering(loop.index0, item.ordering, ordering) }}
+    {{ list_macro.td_published(item.published, loop.index0, 'lessons.', 'cb', item.publish_up, item.publish_down) }}
+    {{ list_macro.td_edit_link(item, loop.index0, 'lesson', 'lessons.', item.title, item.alias) }}
+    {{ list_macro.td_text(item.module_title) }}
+    {{ list_macro.td_text(html('osc.lesson.type', item.type)) }}
+    {{ list_macro.td_text(item.viewlevel_title) }}
+    {{ list_macro.td_text(item.id, 'center') }}
+    {{ list_macro.td_published(item.course_published, loop.index0, 'courses.', false) }}
+    <td class="has-context">
+        <a href="index.php?option=com_oscampus&task=course.edit&id={{ item.courses_id }}">
+            {{ item.course_title }}
+        </a>
+    </td>
+{% endblock %}

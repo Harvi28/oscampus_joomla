@@ -1,0 +1,74 @@
+{#
+ # @package   OSCampus
+ # @contact   www.joomlashack.com, help@joomlashack.com
+ # @copyright 2016-2021 Joomlashack.com. All rights reserved
+ # @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ #
+ # This file is part of OSCampus.
+ #
+ # OSCampus is free software: you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by
+ # the Free Software Foundation, either version 2 of the License, or
+ # (at your option) any later version.
+ #
+ # OSCampus is distributed in the hope that it will be useful,
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ # GNU General Public License for more details.
+ #
+ # You should have received a copy of the GNU General Public License
+ # along with OSCampus.  If not, see <http://www.gnu.org/licenses/>.
+ #}
+
+{% extends 'admin_form.html.twig' %}
+
+{% block page_setup %}
+    {{ parent() }}
+
+    {{ html('script', 'com_oscampus/admin/utilities.min.js', {'relative' : true, 'framework' : true}) }}
+    {{ html('osc.onready', '$.Oscampus.admin.utilities.transfer.init();')|raw }}
+{% endblock %}
+
+{% block main_content %}
+    <h3>{{ 'COM_OSCAMPUS_UTILITIES_TRANSFER_HEADING'|lang }}</h3>
+
+    <div class="tab-description alert alert-info">
+        <span class="icon-info"></span>
+        {{ 'COM_OSCAMPUS_UTILITIES_TRANSFER_DESCRIPTION'|lang }}
+    </div>
+
+    <form name="transferForm" action="index.php">
+        <input type="hidden" name="option" value="com_oscampus"/>
+        <input type="hidden" name="format" value="raw"/>
+        <input type="hidden" name="task" value="utilities.transfer"/>
+        <input type="hidden" name="execute" value="1"/>
+
+        <div class="span3">
+            <div class="center">
+                {% set source = form.getField('source', 'transfer') %}
+                {{ html('osc.render.formfield', source)|raw }}
+            </div>
+            <div class="osc-transfer left" data-field="#{{ value(source, 'id') }}_id"></div>
+        </div>
+
+        <div class="span1"></div>
+
+        <div class="span3 center">
+            <button type="button"
+                    class="btn osc-transfer-execute">{{ 'COM_OSCAMPUS_UTILITIES_TRANSFER_BUTTON'|lang }}</button>
+            <div class="osc-transfer-message">
+                {{ 'COM_OSCAMPUS_UTILITIES_TRANSFER_SELECT_USERS'|lang }}
+            </div>
+        </div>
+
+        <div class="span1"></div>
+
+        <div class="span3">
+            <div class="center">
+                {% set target = form.getField('target', 'transfer') %}
+                {{ html('osc.render.formfield', target)|raw }}
+            </div>
+            <div class="osc-transfer left" data-field="#{{ value(target, 'id') }}_id"></div>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,405 @@
+/* Alledia Installer
+ ========================================================================== */
+.ost-container .ost-steps {
+  text-align: center;
+}
+
+.ost-container .ost-connector {
+  display: table-cell;
+  height: 90px;
+}
+
+.ost-container .ost-step {
+  margin-top: 15px;
+}
+
+.ost-container .ost-steps img {
+  position: relative;
+  top: 50%;
+}
+
+.ost-container .ost-steps .btn {
+  margin-top: 6px;
+}
+
+.ost-container .ost-error {
+  color: #b94a48;
+}
+
+.ost-container .ost-ok {
+  color: #468847;
+}
+
+.ost-container-welcome {
+  margin: 25px 0;
+}
+
+/* Progress bars
+ ========================================================================== */
+.admin.com_oscampus .osc-progress-bar {
+  display: block;
+  width: 100%;
+  background: #f2f2f2;
+  overflow: hidden;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.admin.com_oscampus .osc-progress-bar > span {
+  display: block;
+  overflow: hidden;
+  background: #706560;
+}
+
+.admin.com_oscampus .osc-progress-bar > span.osc-progress-bar-completed {
+  background: #2184cd;
+}
+
+.admin.com_oscampus .osc-progress-bar > span > span {
+  margin: 0 10px;
+  color: #fff;
+  font-size: 10px;
+  text-shadow: 0 0 2px #000;
+}
+
+/* Joomla admin
+ ========================================================================== */
+body.com_oscampus .page-title > span {
+  float: left;
+  width: 48px;
+}
+
+#j-main-container table tr.head2 th {
+  background-color: #ccc !important;
+  color: #333 !important;
+  text-align: center;
+  border-left: solid 1px #333;
+}
+
+#j-main-container table tr.head2 th:last-child {
+  border-right: solid 1px #333;
+}
+
+fieldset.checkboxes input[type=checkbox] {
+  margin-right: 4px;
+}
+
+ul.ui-sortable {
+  padding-left: 10px;
+  padding-top: 5px;
+  list-style: none;
+}
+
+#footer {
+  text-align: center;
+}
+
+body.admin .page-title {
+  background: rgba(0, 0, 0, 0) url(../images/logo-white.png) no-repeat 0 5px / 35px auto;
+  padding-left: 8px;
+}
+
+/* Quizzes & File assets
+ ========================================================================== */
+
+.osc-quiz-questions > ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.osc-quiz-questions > ul > li.osc-question,
+.osc-file-manager > ul > li.osc-file-block {
+  display: table;
+}
+
+.osc-quiz-questions ul li.osc-question,
+.osc-file-manager ul li.osc-file-block {
+  margin: 15px 0;
+  padding: 15px;
+}
+
+.osc-quiz-questions ul li.osc-question:nth-child(2n+1),
+.osc-file-manager ul li.osc-file-block:nth-child(2n+1) {
+  background: rgba(242, 242, 242, 0.5);
+}
+
+.osc-quiz-questions ul li input[type="text"],
+.osc-file-manager ul li input[type="text"] {
+  float: none;
+  line-height: 20px;
+  margin-bottom: 0;
+}
+
+.osc-quiz-questions ul li.osc-question > input[type="text"] {
+  width: 500px;
+  font-weight: 600;
+  font-size: 13px;
+  margin: 0 0 10px 0;
+  padding: 5px 10px;
+  border-left-style: solid;
+  border-left-width: 5px;
+}
+
+.osc-quiz-questions ul li.osc-answer > input[type="text"],
+.osc-file-manager ul li.osc-file-block > input[type="text"],
+.osc-file-manager ul li.osc-file-block > .osc-file-browse > input,
+.osc-file-manager ul li.osc-file-block > textarea {
+  width: 448px;
+  font-size: 12px;
+  margin: 0 0 4px 0;
+  padding: 2px 8px;
+}
+
+.osc-file-manager ul li.osc-file-block > .osc-file-browse > input[type="file"] {
+  width: 220px;
+}
+
+.osc-quiz-questions ul li.osc-answer > input[type="radio"] {
+  float: left;
+  margin-right: 5px;
+}
+
+.osc-quiz-questions button,
+.osc-file-manager button {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  color: #fff;
+  background: #999;
+  border: none;
+  padding: 4px 8px;
+}
+
+.osc-quiz-questions button:hover,
+.osc-quiz-questions button:focus,
+.osc-file-manager button:hover,
+.osc-file-manager button:focus {
+  border: none;
+}
+
+.osc-quiz-questions button.osc-btn-warning-admin,
+.osc-file-manager button.osc-btn-warning-admin {
+  background: #ff0000;
+}
+
+.osc-quiz-questions button.osc-btn-warning-admin:hover,
+.osc-quiz-questions button.osc-btn-warning-admin:focus,
+.osc-file-manager button.osc-btn-warning-admin:hover,
+.osc-file-manager button.osc-btn-warning-admin:focus {
+  background: #FF4D4D;
+}
+
+.osc-quiz-questions button.osc-btn-main-admin,
+.osc-file-manager button.osc-btn-main-admin {
+  background: #8cc14c;
+}
+
+.osc-quiz-questions button.osc-btn-main-admin:hover,
+.osc-quiz-questions button.osc-btn-main-admin:hover,
+.osc-file-manager button.osc-btn-main-admin:hover,
+.osc-file-manager button.osc-btn-main-admin:hover {
+  background: #99c85f;
+}
+
+.osc-quiz-questions ul li.osc-question > button,
+.osc-quiz-questions ul li.osc-answer > button,
+.osc-file-manager > ul li.osc-file-block > button {
+  float: right;
+  margin: 0 0 0 5px;
+}
+
+.osc-quiz-questions ul li.osc-question > button {
+  padding: 5px 8px 6px;
+}
+
+.osc-quiz-questions ul li.osc-quiz-add-question > button,
+.osc-file-manager button.osc-file-add {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 6px 12px;
+}
+
+.osc-quiz-questions ul li.osc-answer > button,
+.osc-quiz-questions ul li.osc-add-answer > button,
+.osc-file-manager ul li.osc-file-block > button {
+  font-size: 12px;
+  padding: 2px 8px;
+}
+
+.osc-quiz-questions ul li h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.osc-quiz-questions li.osc-question ul {
+  padding-bottom: 10px;
+  list-style: none;
+  margin-left: 0;
+}
+
+.osc-quiz-questions ul li.osc-answer {
+  padding-left: 40px;
+}
+
+.osc-quiz-questions ul li.osc-quiz-add-answer {
+  padding-left: 58px;
+}
+
+.osc-quiz-questions ul li.osc-quiz-add-question {
+  margin-top: 20px;
+  padding-top: 40px;
+  border-top: 1px solid #ccc;
+}
+
+.osc-file-manager .ui-sortable {
+  margin-bottom: 20px;
+  margin-left: 0;
+  padding-bottom: 20px;
+  padding-left: 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.osc-file-manager li.osc-file-block button.osc-file-ordering {
+  background: #41a1d6;
+}
+
+.osc-file-manager li.osc-file-block button.osc-file-ordering:hover,
+.osc-file-manager li.osc-file-block button.osc-file-ordering:active {
+  background: #7ebce0;
+}
+
+.osc-file-manager li.osc-file-block {
+  clear: left;
+}
+
+/* Certificate image overlay editing form
+ ========================================================================== */
+#certificate-image {
+  float: left;
+}
+
+#certificate-image .osc-certificate-drag-button {
+  left: -30px;
+}
+
+#certificate-image .osc-certificate-remove-button {
+  left: -55px;
+}
+
+#positions {
+  margin-left: 29px;
+}
+
+#positions .osc-certificate-drag-button {
+  left: -30px;
+}
+
+#positions .data-box {
+  margin: 5px 0;
+}
+
+#positions .data-box input[type="text"],
+#positions .data-box .osc-certificate-drag-button,
+#positions .data-box .osc-certificate-remove-button {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+#positions .data-box .osc-certificate-remove-button {
+  height: 26px;
+  line-height: 26px;
+}
+
+#positions .data-box:last-of-type {
+  margin-bottom: 20px;
+}
+
+.osc-image-overlays {
+  width: 1000px !important;
+}
+
+.osc-image-overlays .osc-certificate-design-area {
+  width: 700px !important;
+}
+
+.osc-image-overlays .osc-certificate-fields-area {
+  width: 250px !important;
+  margin-left: 50px !important;
+}
+
+.osc-image-overlays .osc-certificate-design-area,
+.osc-image-overlays .osc-certificate-fields-area {
+  float: left !important;
+}
+
+.osc-image-overlays .data-box {
+  position: relative;
+  padding: 0;
+  text-align: center;
+  border: 1px dashed #000;
+  display: block;
+}
+
+.osc-image-overlays .data-box input[type="text"] {
+  border: none;
+  width: 100%;
+  background: transparent;
+  text-align: center;
+  padding: 0;
+  height: 17px;
+}
+
+.osc-image-overlays .data-box .osc-certificate-drag-button,
+.osc-image-overlays .data-box .osc-certificate-remove-button {
+  position: absolute;
+  top: -1px;
+  padding: 0 5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  line-height: 21px;
+  height: 20px;
+}
+
+.osc-image-overlays .data-box .osc-certificate-drag-button i,
+.osc-image-overlays .data-box .osc-certificate-remove-button i {
+  margin: 0;
+}
+
+.osc-image-overlays .data-box .osc-certificate-drag-button {
+  cursor: move;
+  width: 30px;
+}
+
+.osc-image-overlays .data-box .osc-certificate-remove-button {
+  cursor: pointer;
+}
+
+.osc-image-overlays .data-box > .btn:last-of-type {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+}
+
+.osc-image-overlays .data-box > .btn:first-of-type {
+  border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  -webkit-border-radius: 3px 0 0 3px;
+}
+
+/* Custom items for ISIS admin template
+ ========================================================================== */
+#sidebar .osc-sidebar-spacer {
+  background-color: #ccc;
+  display: block;
+  width: 100%;
+  padding: 3px 26px;
+  font-weight: bold;
+  text-align: center;
+  margin-left: -26px;
+  margin-right: -26px;
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="search" method="upgrade">
+    <name>plg_search_oscampus</name>
+    <author>Joomlashack</author>
+    <creationDate>July 09 2021</creationDate>
+    <copyright>Copyright 2015-2021 Joomlashack.com. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>help@joomlashack.com</authorEmail>
+    <authorUrl>http://www.joomlashack.com</authorUrl>
+    <version>2.1.6</version>
+    <description>plg_search_oscampus_description</description>
+
+    <files>
+        <folder>language</folder>
+        <filename plugin="oscampus">oscampus.php</filename>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="searchLimit"
+                    label="PLG_SEARCH_OSCAMPUS_PARAMS_SEARCH_LIMIT_LABEL"
+                    description="PLG_SEARCH_OSCAMPUS_PARAMS_SEARCH_LIMIT_DESC"
+                    type="text"
+                    filter="intval"
+                    class="validate-numeric"
+                    default="50"/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

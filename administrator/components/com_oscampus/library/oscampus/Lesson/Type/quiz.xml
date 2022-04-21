@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <form>
+        <fieldset name="content">
+            <fields name="content">
+                <field name="quizLength"
+                       type="text"
+                       label="COM_OSCAMPUS_QUIZ_CONTENT_LENGTH_LABEL"
+                       description="COM_OSCAMPUS_QUIZ_CONTENT_LENGTH_DESC"
+                       hint="COM_OSCAMPUS_QUIZ_CONTENT_QUIZ_LENGTH_PLACEHOLDER"
+                       filter="intval"
+                       class="validate-numeric"/>
+
+                <field name="timeLimit"
+                       type="text"
+                       label="COM_OSCAMPUS_QUIZ_CONTENT_TIME_LIMIT_LABEL"
+                       description="COM_OSCAMPUS_QUIZ_CONTENT_TIME_LIMIT_DESC"
+                       hint="COM_OSCAMPUS_QUIZ_CONTENT_TIME_LIMIT_PLACEHOLDER"
+                       filter="intval"
+                       class="validate-numeric"/>
+
+                <field name="questions"
+                       type="oscampus.questions"
+                       label="COM_OSCAMPUS_QUIZ_CONTENT_QUESTIONS_LABEL"
+                       description="COM_OSCAMPUS_QUIZ_CONTENT_QUESTIONS_DESC"
+                       required="true"/>
+            </fields>
+        </fieldset>
+    </form>
+</metadata>

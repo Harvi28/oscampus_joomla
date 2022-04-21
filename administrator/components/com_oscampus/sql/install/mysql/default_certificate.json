@@ -1,0 +1,11 @@
+{
+    "id"       : "1",
+    "title"    : "Default",
+    "default"  : "1",
+    "image"    : "",
+    "font"     : "",
+    "fontsize" : "0",
+    "fontcolor": "",
+    "movable"  : "{\"editBase\":\"{\\\"top\\\":318,\\\"left\\\":25,\\\"width\\\":700,\\\"height\\\":517,\\\"outer\\\":{\\\"width\\\":700,\\\"height\\\":517}}\",\"text\":{\"provider\":\"\",\"custom\":\"\"},\"overlays\":{\"student\":\"{\\\"top\\\":226,\\\"left\\\":169,\\\"width\\\":366,\\\"height\\\":18,\\\"outer\\\":{\\\"width\\\":368,\\\"height\\\":20}}\",\"course\":\"{\\\"top\\\":297,\\\"left\\\":168,\\\"width\\\":367,\\\"height\\\":18,\\\"outer\\\":{\\\"width\\\":369,\\\"height\\\":20}}\",\"provider\":\"{\\\"top\\\":367,\\\"left\\\":169,\\\"width\\\":367,\\\"height\\\":19,\\\"outer\\\":{\\\"width\\\":369,\\\"height\\\":21}}\",\"teacher\":\"{\\\"top\\\":419,\\\"left\\\":56,\\\"width\\\":151,\\\"height\\\":18,\\\"outer\\\":{\\\"width\\\":153,\\\"height\\\":20}}\",\"completed\":\"{\\\"top\\\":420,\\\"left\\\":495,\\\"width\\\":153,\\\"height\\\":18,\\\"outer\\\":{\\\"width\\\":155,\\\"height\\\":20}}\",\"custom\":\"\"}}",
+    "published": "1"
+}

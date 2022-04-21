@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <form>
+        <fieldset name="content">
+            <field name="content"
+                   type="editor"
+                   label="COM_OSCAMPUS_TEXT_CONTENT_LABEL"
+                   description="COM_OSCAMPUS_TEXT_CONTENT_DESCRIPTION"
+                   filter="JComponentHelper::filterText"
+                   buttons="true"
+                   hide="pagebreak,readmore"
+                   required="true"/>
+        </fieldset>
+    </form>
+</metadata>

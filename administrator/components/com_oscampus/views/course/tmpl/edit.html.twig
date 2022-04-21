@@ -1,0 +1,66 @@
+{#
+ # @package   OSCampus
+ # @contact   www.joomlashack.com, help@joomlashack.com
+ # @copyright 2015-2021 Joomlashack.com. All rights reserved
+ # @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ #
+ # This file is part of OSCampus.
+ #
+ # OSCampus is free software: you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by
+ # the Free Software Foundation, either version 2 of the License, or
+ # (at your option) any later version.
+ #
+ # OSCampus is distributed in the hope that it will be useful,
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ # GNU General Public License for more details.
+ #
+ # You should have received a copy of the GNU General Public License
+ # along with OSCampus.  If not, see <http://www.gnu.org/licenses/>.
+ #}
+
+{% extends "admin_form.html.twig" %}
+
+{% macro lessons_link(course_id, text) %}
+    {% set link = linkto({'view' : 'lessons', 'context' : 'course', 'filter_course' : course_id, 'ordering' : 'lesson.ordering'}) %}
+    {{ html('link', link, text|lang, 'target="_blank"')|raw }}
+{% endmacro %}
+{% import _self as macro %}
+
+{% block form_header %}
+    {{ html('osc.render.formfield', form.getField('title'))|raw }}
+    {{ html('osc.render.formfield', form.getField('alias'))|raw }}
+{% endblock %}
+
+{% block form_body %}
+    {{ form_macro.tabs_startset(form, {'active' : 'main-panel'}) }}
+
+    {{ form_macro.tabs_add(form, 'main') }}
+    {{ form_macro.render_fieldset(form, 'main', false) }}
+    {{ form_macro.tabs_end() }}
+
+    {{ form_macro.tabs_add(form, 'description') }}
+    {{ form_macro.render_field(form, 'description', true) }}
+    {{ form_macro.tabs_end() }}
+
+    {{ form_macro.tabs_add(form, 'lessons', 'COM_OSCAMPUS_COURSE_TAB_LESSONS_LABEL'|lang) }}
+    {% set link =  macro.lessons_link(item.id, 'COM_OSCAMPUS_COURSE_TAB_LESSONS_LABEL') %}
+    <p>{{ 'COM_OSCAMPUS_COURSE_LESSON_TAB'|sprintf(link)|raw }}</p>
+
+    {{ form_macro.render_field(form, 'lessons', true) }}
+    <button type="button" class="btn btn-primary reset-lesson-order">
+        {{ 'COM_OSCAMPUS_COURSE_LESSONS_ORDER_RESET'|lang }}
+    </button>
+    {{ form_macro.tabs_end() }}
+
+    {{ form_macro.tabs_add(form, 'files') }}
+    {{ form_macro.render_field(form, 'files', false) }}
+    {{ form_macro.tabs_end() }}
+
+    {{ form_macro.tabs_add(form, 'metadata') }}
+    {{ html('osc.render.adminfieldset', form, 'metadata', false)|raw }}
+    {{ form_macro.tabs_end() }}
+
+    {{ form_macro.tabs_endset() }}
+{% endblock %}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_OSCAMPUS_VIEW_NEWCOURSES_DEFAULT_TITLE">
+        <message>
+            <![CDATA[COM_OSCAMPUS_VIEW_NEWCOURSES_DEFAULT_DESC]]>
+        </message>
+    </layout>
+
+    <fields name="params">
+        <fieldset
+            name="params"
+            label="COM_OSCAMPUS_VIEW_PARAMS_LABEL">
+            <field
+                name="releasePeriod"
+                label="COM_OSCAMPUS_VIEW_NEWCOURSES_PARAMS_RELEASE_PERIOD_LABEL"
+                description="COM_OSCAMPUS_VIEW_NEWCOURSES_PARAMS_RELEASE_PERIOD_DESC"
+                type="text"
+                default="1 month"/>
+        </fieldset>
+    </fields>
+</metadata>

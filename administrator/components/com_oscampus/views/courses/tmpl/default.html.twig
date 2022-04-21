@@ -1,0 +1,49 @@
+{#
+ # @package   OSCampus
+ # @contact   www.joomlashack.com, help@joomlashack.com
+ # @copyright 2015-2021 Joomlashack.com. All rights reserved
+ # @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ #
+ # This file is part of OSCampus.
+ #
+ # OSCampus is free software: you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by
+ # the Free Software Foundation, either version 2 of the License, or
+ # (at your option) any later version.
+ #
+ # OSCampus is distributed in the hope that it will be useful,
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ # GNU General Public License for more details.
+ #
+ # You should have received a copy of the GNU General Public License
+ # along with OSCampus.  If not, see <http://www.gnu.org/licenses/>.
+ #}
+
+{% extends 'admin_list.html.twig' %}
+
+{% block list_head %}
+    {{ list_macro.th_checkall() }}
+    {{ list_macro.th_ordering(ordering, items) }}
+    {{ list_macro.th_sort('course.published', 'COM_OSCAMPUS_PUBLISHED', ordering.direction, ordering.order) }}
+    {{ list_macro.th_sort('course.title', 'COM_OSCAMPUS_TITLE', ordering.direction, ordering.order) }}
+    {{ list_macro.th_sort('tags', 'COM_OSCAMPUS_TAGS', ordering.direction, ordering.order) }}
+    {{ list_macro.th_sort('pathways', 'COM_OSCAMPUS_COURSE_PATHWAYS_LABEL', ordering.direction, ordering.order) }}
+    {{ list_macro.th_sort('course.difficulty', 'COM_OSCAMPUS_COURSE_DIFFICULTY_LABEL', ordering.direction, ordering.order) }}
+    {{ list_macro.th_sort('teacher_user.name', 'COM_OSCAMPUS_TEACHER', ordering.direction, ordering.order) }}
+    {{ list_macro.th_sort('viewlevel.title', 'COM_OSCAMPUS_ACCESS_LEVEL', ordering.direction, ordering.order) }}
+    {{ list_macro.th_sort('course.id', 'COM_OSCAMPUS_ID', ordering.direction, ordering.order, '1') }}
+{% endblock %}
+
+{% block list_item %}
+    {{ list_macro.td_check(loop.index0, item.id) }}
+    {{ list_macro.td_ordering(loop.index0, item.ordering, ordering) }}
+    {{ list_macro.td_published(item.published, loop.index0, 'courses.', 'cb', item.publish_up, item.publish_down) }}
+    {{ list_macro.td_edit_link(item, loop.index0, 'course', 'courses.', item.title, item.alias) }}
+    {{ list_macro.td_text(item.tags) }}
+    {{ list_macro.td_text(item.pathways) }}
+    {{ list_macro.td_text(html('osc.course.difficulty', item.difficulty)) }}
+    {{ list_macro.td_text(item.teacher_name) }}
+    {{ list_macro.td_text(item.viewlevel_title) }}
+    {{ list_macro.td_text(item.id, 'center') }}
+{% endblock %}

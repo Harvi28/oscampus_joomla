@@ -1,0 +1,13 @@
+.osc_question_option{
+	display: flex;
+}
+
+input[type="text"]
+{
+	width: 50%;
+}
+
+input[type="radio"]
+{
+	/*float: left;*/
+}

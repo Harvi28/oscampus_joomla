@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <form>
+        <fieldset name="content" description="COM_OSCAMPUS_LESSON_CONTENT_REQUIRES_TYPE">
+            <field name="dummy" type="hidden" filter="unset"/>
+        </fieldset>
+    </form>
+</metadata>

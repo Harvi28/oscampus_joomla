@@ -1,0 +1,134 @@
+{#
+ # @package   OSCampus
+ # @contact   www.joomlashack.com, help@joomlashack.com
+ # @copyright 2015-2021 Joomlashack.com. All rights reserved
+ # @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ #
+ # This file is part of OSCampus.
+ #
+ # OSCampus is free software: you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by
+ # the Free Software Foundation, either version 2 of the License, or
+ # (at your option) any later version.
+ #
+ # OSCampus is distributed in the hope that it will be useful,
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ # GNU General Public License for more details.
+ #
+ # You should have received a copy of the GNU General Public License
+ # along with OSCampus.  If not, see <http://www.gnu.org/licenses/>.
+ #}
+
+{# Heading cells #}
+
+{% macro th_checkall() %}
+    <th style="width: 1%;">
+        {{ html('grid.checkall')|raw }}
+    </th>
+{% endmacro %}
+
+{% macro th_ordering(ordering, items) %}
+    <th style="width: 1%;" class="nowrap center hidden-phone">
+        {{ html('searchtools.sort', '', ordering.field, ordering.direction, ordering.order, null, 'asc', 'JGRID_HEADING_ORDERING', 'icon-menu-2')|raw }}
+    </th>
+{% endmacro %}
+
+{% macro th_published(field, direction, order) %}
+    <th style="width: 1%; min-width:55px" class="nowrap center">
+        {{ html('searchtools.sort', 'COM_OSCAMPUS_PUBLISHED', field, direction, order)|raw }}
+    </th>
+{% endmacro %}
+
+{% macro th_sort(field_name, title, direction, order, width = '') %}
+    <th class="nowrap"{{ width ? ' style="width: ' ~ width ~ ';"' : '' }}>
+        {{ html('searchtools.sort', title, field_name, direction, order)|raw }}
+    </th>
+{% endmacro %}
+
+{% macro th_text(text, width = '') %}
+    <th class="nowrap"{{ width ? ' style="width: ' ~ width ~ ';"' : '' }}>
+        {{ text|lang }}
+    </th>
+{% endmacro %}
+
+{% macro th_default(field, direction, order) %}
+<th style="width: 1%;" class="nowrap center">
+    {{ html('searchtools.sort', 'COM_OSCAMPUS_DEFAULT', field, direction, order)|raw }}
+</th>
+{% endmacro %}
+
+{# data cells #}
+
+{% macro td_ordering(index, order_value, ordering) %}
+    <td class="order nowrap center hidden-phone">
+        {% set tt_text = html('tooltipText', 'JORDERINGDISABLED') %}
+        {% set iconClass = 'sortable-handler' ~ (ordering.enabled ? '' : ' inactive tip-top hasTooltip" title="' ~ tt_text) %}
+        <span class="{{ iconClass }}">
+                <span class="icon-menu"></span>
+            </span>
+        {% if ordering.enabled %}
+            <input type="text"
+                   style="display:none"
+                   name="order[]"
+                   value="{{ order_value }}"
+                   class="width-20 text-area-order "/>
+        {% endif %}
+
+    </td>
+{% endmacro %}
+
+{% macro td_check(index, id) %}
+    <td class="center hidden-phone">
+        {{ html('grid.id', index, id)|raw }}
+    </td>
+{% endmacro %}
+
+{% macro td_published(published, index, prefix, enabled = true, publish_up = null, publish_down = null) %}
+    <td style="width: 1%;" class="nowrap center">
+        <div class="btn-group">
+            {{ html('jgrid.published', published, index, prefix, enabled, 'cb', publish_up, publish_down)|raw }}
+        </div>
+    </td>
+{% endmacro %}
+
+{% macro td_default(default, index, prefix, enabled = true) %}
+    <td class="center">
+        {{ html('jgrid.isdefault', default, index, prefix, enabled and not default)|raw }}
+    </td>
+{% endmacro %}
+
+{% macro td_edit_link(row, index, controller, prefix = '', title = '', alias = '', details = '', details_title = '') %}
+    {% set link = 'index.php?option=com_oscampus&task=' ~ controller ~ '.edit&id=' ~ row.id %}
+
+    <td class="has-context">
+        <div class="pull-left break-word">
+            {% if row.checked_out and prefix %}
+                {{ html('jgrid.checkedout', index, row.editor, row.checked_out_time, prefix, true)|raw }}
+            {% endif %}
+
+            <a href="{{ link }}">
+                {{ title ?: row.title }}
+            </a>
+
+            {% if alias or row.alias %}
+                <br>
+                <span class="small break-word">
+                    ({{ 'COM_OSCAMPUS_ALIAS'|lang }}: {{ alias ?: row.alias }})
+                </span>
+            {% endif %}
+
+            {% if details %}
+                <div class="small">
+                    {{ details_title|lang }}: {{ details }}
+                </div>
+            {% endif %}
+        </div>
+    </td>
+{% endmacro %}
+
+{% macro td_text(text, class = '') %}
+    <td class="{{ class }}">
+        {{ text|lang }}
+    </td>
+{% endmacro %}

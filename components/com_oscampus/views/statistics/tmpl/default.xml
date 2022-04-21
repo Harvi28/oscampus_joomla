@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_OSCAMPUS_VIEW_STATISTICS_DEFAULT_TITLE">
+        <message>
+            <![CDATA[COM_OSCAMPUS_VIEW_STATISTICS_DEFAULT_DESC]]>
+        </message>
+    </layout>
+
+    <fields name="params">
+        <fieldset name="basic">
+            <field name="list_limit"
+                   label="COM_OSCAMPUS_STATISTICS_LIST_LIMIT_LABEL"
+                   description="COM_OSCAMPUS_STATISTICS_LIST_LIMIT_DESC"
+                   type="limitbox"
+                   limits="5,10,15,20,25,30,50,100"
+                   showall="true"
+                   default="100">
+                <option value="-1">COM_OSCAMPUS_OPTION_NO_LIMITBOX</option>
+            </field>
+
+            <field name="welcome"
+                   label="COM_OSCAMPUS_STATISTICS_WELCOME_LABEL"
+                   description="COM_OSCAMPUS_STATISTICS_WELCOME_DESC"
+                   type="editor"
+                   filter="JComponentHelper::filterText"/>
+
+            <fields name="student">
+                <fieldset name="student"
+                          label="COM_OSCAMPUS_STATISTICS_STUDENT_LABEL"
+                          description="COM_OSCAMPUS_STATISTICS_STUDENT_DESC">
+                    <field name="allLessons"
+                           label="COM_OSCAMPUS_STATISTICS_STUDENT_ALL_LESSONS_LABEL"
+                           description="COM_OSCAMPUS_STATISTICS_STUDENT_ALL_LESSONS_DESC"
+                           type="radio"
+                           class="btn-group btn-group-yesno"
+                           default="1">
+                        <option value="1">JYES</option>
+                        <option value="0">JNO</option>
+                    </field>
+                </fieldset>
+            </fields>
+        </fieldset>
+    </fields>
+</metadata>

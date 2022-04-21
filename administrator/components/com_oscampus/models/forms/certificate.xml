@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="hidden">
+        <field name="id" type="hidden"/>
+    </fieldset>
+
+    <fieldset name="heading">
+        <field name="title"
+               type="text"
+               label="COM_OSCAMPUS_TITLE"
+               class="input-xxlarge input-large-text"
+               required="true"/>
+    </fieldset>
+
+    <fieldset name="main"
+              label="COM_OSCAMPUS_CERTIFICATE_TAB_MAIN_LABEL">
+        <field name="image"
+               type="media"
+               label="COM_OSCAMPUS_CERTIFICATE_IMAGE_LABEL"
+               description="COM_OSCAMPUS_CERTIFICATE_IMAGE_DESC"/>
+
+        <field name="fields"
+               type="oscampus.imageoverlays"/>
+    </fieldset>
+
+    <fieldset name="settings"
+              label="COM_OSCAMPUS_CERTIFICATE_TAB_SETTINGS_LABEL">
+        <field name="published"
+               type="list"
+               label="COM_OSCAMPUS_PUBLISHED"
+               class="chzn-color-state"
+               default="1">
+            <option value="0">JUNPUBLISHED</option>
+            <option value="1">JPUBLISHED</option>
+        </field>
+
+        <field name="font"
+               label="COM_OSCAMPUS_CERTIFICATE_FONT_LABEL"
+               type="oscampus.ttfont">
+            <option value="">JGLOBAL_USE_GLOBAL</option>
+        </field>
+
+        <field name="fontsize"
+               label="COM_OSCAMPUS_CERTIFICATE_FONTSIZE_LABEL"
+               type="text"
+               hint="JGLOBAL_USE_GLOBAL"
+               filter="floatval"/>
+
+        <field name="fontcolor"
+               label="COM_OSCAMPUS_CERTIFICATE_FONTCOLOR_LABEL"
+               type="color"
+               hint="JGLOBAL_USE_GLOBAL"/>
+
+        <field name="dateformat"
+               label="COM_OSCAMPUS_CERTIFICATE_DATEFORMAT_LABEL"
+               description="COM_OSCAMPUS_CERTIFICATE_DATEFORMAT_DESC"
+               type="text"
+               hint="JGLOBAL_USE_GLOBAL"/>
+
+
+    </fieldset>
+
+    <fieldset name="movable">
+        <fields name="movable">
+            <field type="hidden" name="editBase"/>
+
+            <fields name="text">
+                <field type="text" name="provider" hint="COM_OSCAMPUS_CERTIFICATE_PROVIDER"/>
+                <field type="text" name="custom" hint="COM_OSCAMPUS_CERTIFICATE_CUSTOM"/>
+            </fields>
+
+            <fields name="overlays">
+                <field type="hidden" name="student"/>
+                <field type="hidden" name="course"/>
+                <field type="hidden" name="provider"/>
+                <field type="hidden" name="teacher"/>
+                <field type="hidden" name="completed"/>
+                <field type="hidden" name="custom"/>
+            </fields>
+        </fields>
+    </fieldset>
+</form>
